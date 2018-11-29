@@ -1,0 +1,13 @@
+/* .main1>div>h1{
+    color: yellow;
+} */
+/* .sub1>h1{
+    color: yellow;
+} */
+
+/* .main1>div.sub1{
+    color: yellow;
+} */
+.main1>.sub1>h1{
+    color:yellow;
+}

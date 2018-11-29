@@ -1,0 +1,53 @@
+/* selector using Element ID
+#foo{
+    color: red;
+} 
+
+*/
+
+/* selector using Element Class
+.foo{
+    color: red;
+} 
+
+*/
+
+/*Selector all Elements
+ *{
+    color: red;
+} 
+*/
+
+
+/* Selector using Tag Name 
+h1{
+    color: red;
+} 
+
+*/
+div{
+    color: yellow;
+}
+div p{
+    color: black;
+}
+
+.foo{
+    color: green;
+}
+.fee{
+    color: wheat;
+}
+.faa{
+    color: red;
+}
+
+/* Select second p element inside any div */
+div>p:nth-of-type(2){
+    color: yellow;
+}
+
+
+section h1{
+background-color: blue;
+}
