@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+.head{
+    float: left;
+    width: 100%;
+    height: 300px;
+    background-color: red;  
+}
+.leftdiv{
+    float: left;
+    width: 30%;
+    background-color: orange;
+    height: 600px;
+}
+.content{
+    float: left;
+    width:70%;
+    background-color: blue;
+    height:600px; 
+}
+.footer{
+    float: left;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+}
+@media screen and (max-width:600px){
+    .leftdiv,.content{
+        width: 100%;
+    }
+}
