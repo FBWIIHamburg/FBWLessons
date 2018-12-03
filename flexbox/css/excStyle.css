@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    margin: 0px;
+}
+.flexContainer {
+    display: flex;
+    background-color: black;
+    height: 100vh;
+}
+
+.main1 {
+    flex: 1;
+    background-color: aqua;
+}
+
+.main2 {
+    flex: 4;
+    background-color: bisque;
+    flex-direction: column;
+    display: flex;
+}
+
+.main2>.header {
+    background-color: green;
+    flex:1;
+    max-height: 20vh;
+}
+.main2>.content {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex:1;
+}
+.main2>.footer {
+    background-color: green;
+    flex: 1;
+    max-height: 20vh;
+}
+
+.content>.article {
+    background-color: coral;
+    flex: 3;
+
+    overflow:scroll;
+    overflow-x: hidden;
+}
+.content>.aside {
+    background-color: cornflowerblue;
+    flex: 1; 
+}

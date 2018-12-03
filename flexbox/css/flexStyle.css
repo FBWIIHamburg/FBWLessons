@@ -1,0 +1,23 @@
+.FlexContainer{
+    display: flex;
+    background-color:black;
+}
+.FlexContainer>div{
+    
+    background-color:white;
+height: 200px;
+margin:10px
+}
+.div1{
+    flex: 1;
+
+}
+.div2{
+    flex: 2;
+    
+}
+.div3{
+    flex: 3;
+    
+}
+
