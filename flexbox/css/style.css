@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    background-color: aquamarine;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content:  center;
+
+    
+}
+.container>div{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.containerDiv{
+    display: flex;
+/* flex-direction: row-reverse; */
+}
+.head{
+    height: 200px;
+    width: 100%;
+    background-color: black;
+}
+.sideDiv{
+    width: 30%;
+    height: 400px;
+    background-color: skyblue;
+}
+.content{
+    width: 70%;
+    height: 400px;
+    background-color: lightgrey;
+}
+.footer{
+    height: 200px;
+    width: 100%;
+    background-color: black;
+}

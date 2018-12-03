@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 .head{
-    float: left;
+    /* float: left; */
     width: 100%;
     height: 300px;
     background-color: red;  
