@@ -11,30 +11,31 @@ body{
     height: 100vh;
 }
 
-.main1 {
+.nav {
     flex: 1;
     background-color: aqua;
+    
 }
 
-.main2 {
+.main {
     flex: 4;
     background-color: bisque;
     flex-direction: column;
     display: flex;
 }
 
-.main2>.header {
+.header {
     background-color: green;
     flex:1;
     max-height: 20vh;
 }
-.main2>.content {
+.content {
     background-color: white;
     display: flex;
     flex-direction: row;
     flex:1;
 }
-.main2>.footer {
+.footer {
     background-color: green;
     flex: 1;
     max-height: 20vh;
@@ -43,7 +44,7 @@ body{
 .content>.article {
     background-color: coral;
     flex: 3;
-
+    
     overflow:scroll;
     overflow-x: hidden;
 }
