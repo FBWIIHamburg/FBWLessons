@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .container{
     display: flex;
     background-color: aquamarine;
@@ -26,18 +29,27 @@ flex-wrap: wrap;
     background-color: black;
 }
 .sideDiv{
-    flex: 30%;
+    border:1px solid black;
+    flex: 20%;
     max-width: 200px;
     height: 400px;
     background-color: skyblue;
 }
 .content{
-    flex: 70%;
+    border:1px solid black;
+    flex: 60%;
     height: 400px;
-    background-color: lightgrey;
+    background-color: brown;
 }
 .footer{
     height: 200px;
     flex: 100%;
     background-color: black;
+}
+
+@media screen and (max-width : 800px){
+    .sideDiv , .content{
+        flex:100%;
+        max-width: none;
+    }
 }
