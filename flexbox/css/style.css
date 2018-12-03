@@ -18,24 +18,26 @@
 .containerDiv{
     display: flex;
 /* flex-direction: row-reverse; */
+flex-wrap: wrap;
 }
 .head{
     height: 200px;
-    width: 100%;
+    flex: 100%;
     background-color: black;
 }
 .sideDiv{
-    width: 30%;
+    flex: 30%;
+    max-width: 200px;
     height: 400px;
     background-color: skyblue;
 }
 .content{
-    width: 70%;
+    flex: 70%;
     height: 400px;
     background-color: lightgrey;
 }
 .footer{
     height: 200px;
-    width: 100%;
+    flex: 100%;
     background-color: black;
 }
