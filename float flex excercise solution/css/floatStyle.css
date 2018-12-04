@@ -1,0 +1,36 @@
+.nav{
+    float: left;
+    background-color: lightblue;
+    width: 10%;
+    min-height:100vh;
+}
+.header{
+    float: left;
+    background-color: lightcoral;
+    width: 90%;
+    min-height:10vh;
+}
+.middel{
+    width: 80%;
+    float: left;
+    background-color: aqua;
+    height: 90vh;
+}
+.aside{
+    width: 10%;
+    float: left;
+    background-color: azure;
+    height: 90vh;
+}
+.article{
+    width: 100%;
+    float: left;
+    background-color: blue;
+    height: 80vh;
+}
+.footer{
+    width: 100%;
+    float: left;
+    background-color: beige;
+    height: 10vh;
+}
