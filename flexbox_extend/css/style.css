@@ -3,23 +3,22 @@
     width: 100%;
     height: 100px;
 }
-.main div{
-    width:600px;
-}
+
 .first{
     background-color: blue;
 height: 100px; 
 flex-shrink: 5;
+width:600px;
 }
 .second{
     background-color: darkgoldenrod;
     height: 100px; 
     flex-shrink: 1;
- 
+    width:600px;
 }
 .third{
     background-color: fuchsia;
     height: 100px;
     flex-shrink: 4;
-
+    width:600px;
 }
