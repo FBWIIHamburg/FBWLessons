@@ -50,9 +50,10 @@ nav.vertical>ul>li{
     border: 1px solid rgb(66, 66, 139);
     color: black;
 }
-nav.vertical>ul>li:hover{
-    font-size: 18px;
+nav.vertical>ul>li>a:hover{
+    /* font-weight: bolder; */
     background-color: darkorange;
+
 }
 /* end of start of vertical navigation */
 
@@ -81,9 +82,12 @@ nav.horizontal>ul>li{
     border: 1px solid rgb(66, 66, 139);
     color: black;
 }
-nav.horizontal>ul>li:hover{
-    font-size: 18px;
+nav.horizontal>ul>li>a:hover{
+    /* font-weight: bolder; */
     background-color: darkorange;
 }
 
 /* end of start of horizontal navigation */
+.img-responsive{
+    width: 100%;
+}
