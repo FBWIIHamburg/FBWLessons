@@ -107,3 +107,24 @@ button{
     padding-top:10px;
     padding-bottom:10px;
 }
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .row{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .top{
+        flex-direction: column;
+    }
+} 
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+} 
+
