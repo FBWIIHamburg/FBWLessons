@@ -1,0 +1,29 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+grid-template-rows: 200px 200px 200px;
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+    padding:10px;
+    background-color:blue;
+
+    /*  */
+    align-content: flex-end;
+
+
+    height: 100vh;
+    
+
+}
+.grid-container>div{
+    font-size: 40px;
+    background-color: lightblue;
+    border:1px solid black;
+    text-align: center;
+}
+.grid-container>div:nth-child(2){
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}

@@ -1,0 +1,30 @@
+.grid-container{
+display: grid;
+/* each number represent a column width */
+/* grid-template-columns:500px 200px 200px 200px; */
+grid-template-columns:auto auto auto;
+/* grid-column-gap :10px;
+grid-row-gap :10px; */
+
+grid-gap: 10px 20px;
+
+
+
+
+background-color: blue;
+padding: 10px;
+}
+
+
+.grid-container>div{
+    border: 1px solid black;
+    background-color: lightblue;
+     font-size:40px;
+     text-align: center;
+}
+.grid-container>div:nth-child(1){
+    background-color: lightcoral;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+}
