@@ -12,4 +12,6 @@ opacity: 0.5;
 }
 div{
     height: 2000px;
+    background:  url(../images/paper.gif) repeat ;
+    opacity: 0.9;
 }

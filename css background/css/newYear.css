@@ -1,0 +1,42 @@
+body{
+    background: url(../images/paper.gif) ;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+.banner{
+background: url(../images/tumblr_mfav1yTMjC1riifnwo3_400.gif) repeat-x;
+height: 50vh;
+width: 50vw;
+display: grid;
+align-content: center;
+justify-content:center;
+margin-right: 10%;
+margin-left: 10%;
+margin-top: 50px;
+box-shadow: 5px 2px 3px black;
+
+/* border-top:3px solid red;
+
+border-left:3px double blue; */
+
+
+/* border-left-width:3px; */
+/* border-left-color: lightgreen; */
+/* border-left-style: double; */
+
+border:5px solid pink;
+border-radius:50%; 
+/* border-radius:top-left top-right bottom-right bottom-left;  */
+
+
+
+}
+.banner>h1{
+    text-align: center;
+    font-size: 5vw;
+    color: aqua;
+    font-family: sans-serif;
+
+}
