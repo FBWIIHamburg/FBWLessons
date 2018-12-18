@@ -1,0 +1,15 @@
+body{
+    /* background-color: red; */
+    /* background-image: url(images/images.jpeg);
+    background-repeat: no-repeat;
+    background-position: 50% 20% ;
+    background-attachment: fixed; */
+    background: rgba(255,123,100,0.3) url(../images/images.jpeg) no-repeat 50% 50%;
+    background-attachment: fixed;
+    background-size: 100vw 100vh; /*cover, contain */
+opacity: 0.5;
+
+}
+div{
+    height: 2000px;
+}
