@@ -8,22 +8,15 @@ nav{
     justify-content: center;
     align-content: center;
     height: 150px;
-
-
     position: fixed;
     left: 0px;
     right: 0px;
     top: 0px;
     
-    
-
 }
-
 nav>a{
     text-decoration: none;
     margin: 30px;
-    
-    
 }
 .grid-contaner{
     display: grid;
