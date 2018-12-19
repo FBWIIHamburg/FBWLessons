@@ -22,12 +22,14 @@ nav.hor>ul>li{
  nav.hor>ul>li>a{
      text-decoration: none;
 display: block;
+text-transform: capitalize;
 }
 nav.hor>ul>li:hover{
     background-color: gold;
 }
 nav.hor>ul>li:hover>a{
     color: white;
+    
 }
 nav.ver{
     max-width: 200px;
@@ -51,9 +53,34 @@ nav.ver>a:hover{
     color: white;
 }
 #home{
-    background-color: lightgreen;
+    background-color: rgba(144, 238, 144, 0.376);
     height: 800px;
-    text-align: center;
+   
+
+
+    /* text format */
+    /* text-transform: lowercase; */
+    text-indent: 50px; /* first space of the first line */
+    letter-spacing: 5px;
+    line-height: 1.5;
+direction: rtl;
+word-spacing: 25px;
+/* text-shadow: 5px 5px 10px blue; */
+
+    /* ///////////////////////////// */
+
+
+    /* font syles */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style:italic ;
+font-weight: bold;
+font-variant: small-caps;
+
+
+    /* ///////////////////// */
+}
+#home>span{
+    font-weight: bolder;
 }
 #about{
     background-color: lightgrey;
