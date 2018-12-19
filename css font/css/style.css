@@ -1,0 +1,33 @@
+@font-face{
+    font-family: "ahmad_font";
+    src: url('../fonts/Ultra_Fresh.ttf');
+}
+@font-face{
+    font-family: "ahmad_font2";
+    src: url('../fonts/Shafeer.otf');
+}
+@font-face{
+    font-family: "arab_font";
+    src: url('../fonts/Changa-Bold.ttf');
+}
+h1{
+    font-family: 'Istok Web', sans-serif;
+}
+p{
+    font-family: 'ahmad_font2';
+}
+.arabclass{
+    font-family: 'Rakkas', cursive;;
+    text-align: right
+}
+
+
+/* font-family: 'Shadows Into Light', cursive;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Amatic SC', cursive;
+font-family: 'Francois One', sans-serif;
+font-family: 'Alegreya', serif;
+font-family: 'ABeeZee', sans-serif;
+font-family: 'Istok Web', sans-serif;
+font-family: 'Courgette', cursive;
+font-family: 'Rakkas', cursive;*/
