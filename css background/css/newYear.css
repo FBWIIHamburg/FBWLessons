@@ -12,9 +12,9 @@ width: 50vw;
 display: grid;
 align-content: center;
 justify-content:center;
-margin-right: 10%;
+/* margin-right: 10%;
 margin-left: 10%;
-margin-top: 50px;
+margin-top: 50px; */
 box-shadow: 5px 2px 3px black;
 
 /* border-top:3px solid red;

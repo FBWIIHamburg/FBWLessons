@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+html{
+    font-size: 16px;
+}
+.root{
+    font-size: 2rem;
+}
+.container{
+    border: 2px solid black; 
+    margin: auto;
+    margin-top:20px;
+    padding: 0;
+   /* outline: 1px double green; */
+font-size: 4rem;
+
+
+
+/* height:1rem; */
+/* cm , mm , px , pt, in     are absolute units */
+
+/* vw , vh , em , rem , vmax , vmin , %      are relative units*/
+
+}
+
+@media only screen  and (max-width:900px){
+    html{
+        font-size:3vw;
+        color:red ;
+    }
+}
+@media only screen  and (max-width:765px){
+    html{
+        font-size:4vw;
+        color:blue ;
+    }
+}
+
+
