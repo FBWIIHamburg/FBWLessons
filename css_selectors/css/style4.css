@@ -1,0 +1,51 @@
+div:first-of-type{
+    color: yellow;
+}
+
+
+/* a[target]{
+    color:red;
+} */
+/* br+a{
+    color:red;
+} */
+
+/* body>a:nth-of-type(2){
+    color:red
+} */
+
+p::after{
+   content: " I am a content which has been added by CSS "; 
+   color: blue;
+}
+p::before{
+    content: " hello "; 
+    color: red;
+ }
+ a::after{
+     content:" "attr(href);
+     background-color:yellow; 
+ }
+
+ p::first-letter{
+     font-size: 50px;
+ }
+ p::first-line{
+     color: lightblue;
+ }
+ .percent::after{
+     content: "%";
+     color: red;
+ }
+ article:only-child{
+     color: green;
+     font-size: 30px;
+ }
+ input:focus{
+     border: 2px solid blue;
+     box-shadow: 5px 5px 3px black;
+ }
+ input:out-of-range{
+    border: 2px solid red;
+    box-shadow: 5px 5px 3px red;
+ }

@@ -7,6 +7,7 @@ padding:10px;
 position: fixed;
 right: 0px;
 left: 0px;
+display: flex;
 }
 nav.hor>ul>li{
     display: inline-block;
@@ -18,16 +19,17 @@ nav.hor>ul>li{
     border-radius: 20%;
     width:200px;
     text-align: center;
+    height: 40px;
  }
- nav.hor>ul>li>a{
+ nav.hor>ul>li>a,nav.hor>ul>li>ul>li>a{
      text-decoration: none;
 display: block;
 text-transform: capitalize;
 }
-nav.hor>ul>li:hover{
+nav.hor>ul>li:hover,nav.hor>ul>li>ul>li:hover{
     background-color: gold;
 }
-nav.hor>ul>li:hover>a{
+nav.hor>ul>li:hover>a,nav.hor>ul>li>ul>li:hover>a{
     color: white;
     
 }
@@ -97,4 +99,24 @@ font-variant: small-caps;
 #blog{
     background-color: lightyellow;
     height: 800px;
+}
+.hor>ul>li>ul{
+     display: none;
+    list-style-type: none;
+    width: 200px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+}
+.hor>ul>li>ul>li{
+    margin-bottom: 10px;
+    background-color: lightblue;
+    font-size: 20px;
+    border-radius: 20%;
+    width:200px;
+    text-align: center;
+}
+.hor>ul>li:hover>ul{
+    display: block;
 }
