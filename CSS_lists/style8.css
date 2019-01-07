@@ -1,0 +1,26 @@
+.container{
+    width:500px;
+    background-color: lightgreen;
+    height: 50vh;
+    overflow-x: auto;
+    position: relative;
+}
+.stickyDiv{
+    width: 100px;
+    height: 120px;
+    position: sticky;
+    top: 10px;
+    /* bottom: 0px; */
+    
+}
+.stickyDiv>div{
+    width: 100px;
+    height: 120px;
+    background-color: lightsalmon;
+    font-size: 32px;
+    font-weight: 400px;
+    visibility: hidden;
+}
+.stickyDiv:hover>div{
+    visibility: visible;
+}

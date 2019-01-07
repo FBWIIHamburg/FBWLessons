@@ -1,0 +1,32 @@
+.dropdown-content>a{
+    display: block;
+    text-decoration: none;
+    padding: 13px 16px;
+    color: black;
+    text-align: center;
+    
+}
+.dropdown-content>a:hover{
+    background-color: bisque;
+}
+.dropdown-content{
+position: absolute;
+min-width: 150px;
+background-color: lightyellow;
+display: none;
+}
+.dropdown{
+    position: relative;
+    /* background-color: azure; */
+    width: 150px;
+}
+.dropdown:hover>.dropdown-content{
+    display: block;
+}
+.dropbtn{
+width: 150px;
+background-color: rgb(155, 148, 148);
+color: white;
+font-size: 16px;
+cursor: pointer;
+}
