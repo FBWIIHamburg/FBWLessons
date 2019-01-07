@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.someDiv{
+    
+    /* height: 500px; */
+    width: 500px;
+    background-color: lightcyan;
+}
+
+.somePar{
+    /* position: static; top / right bottom left will not take effect */
+    position: sticky;
+top:100px;
+left: 300px;
+
+
+
+    width: 400px;
+    height: 200px;
+    background-color: gray;
+    border: 1px solid black;
+}
