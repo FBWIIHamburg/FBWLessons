@@ -1,0 +1,24 @@
+.inlineSpan{
+    display: inline;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid green;
+    background-color: gray;
+}
+.inlineblockSpan{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid green;
+    background-color: gray;
+}
+.blockSpan{
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid green;
+    background-color: gray;
+}

@@ -1,0 +1,7 @@
+.somediv{
+    display: inline; /*it will fit to its width*/
+    /*display: block; it will take the full width of the parent*/
+    /*display: none;it will be invisible*/
+    
+    background-color: red;
+}

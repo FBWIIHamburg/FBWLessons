@@ -1,0 +1,19 @@
+.someList{
+    list-style: square inside url(./sqpurple.gif);
+    /* list-style-image: url(./sqpurple.gif);
+    list-style-position: inside; */
+    
+}
+.someList>li{
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: black; */
+    border: 1px solid black;
+}
+.someList1{
+    list-style-image: url(./sqpurple.gif);
+    list-style-position: outside;
+}
+.someList1>li{
+    border: 1px solid black;
+}

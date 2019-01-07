@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.someTable{
+    border-collapse: collapse;
+    width: 100vw;
+    /* height: 100vh; */
+}
+.someTable , th , td{
+    border: 1px solid blue;
+}
+.someTable tr:nth-child(even){
+    background-color: #aaa;
+}
+.someTable tr:nth-child(odd){
+    background-color: #666;
+}
+
+.someTable tr th {
+    background-color: rgb(14, 233, 43);
+}
