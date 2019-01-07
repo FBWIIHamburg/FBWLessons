@@ -1,0 +1,32 @@
+.container>img{
+    
+}
+.container{
+    background-color: lightcyan;
+    /* position: relative; */
+    height: 200vh;
+    width: 100vw;
+}
+.container img:nth-child(1){
+    position: fixed;
+    border: 5px solid green;
+    top: 50px;
+    left:50px;
+    z-index: 2;
+}
+.container img:nth-child(2){
+    position: sticky;
+    border: 5px solid green;
+    top: 200px;
+    left:200px;
+    z-index:1;
+}
+.container img:nth-child(1){
+    position: absolute;
+    border: 5px solid green;
+    top: 35%;
+    left:35%;
+width: 30%;
+height: 30%;
+    z-index: 0;
+}
