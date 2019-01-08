@@ -1,11 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h1{
+    font-size: 50px;
+}
+p{
+    font-size: 32px;
 }
 .header
 {
-background-image:linear-gradient(to right bottom, rgba(0, 128, 0, 0.3) , rgba(255, 255, 0, 0.9)),
+background-image:linear-gradient(to right bottom, rgba(0, 128, 0, 0.3) ,
+ rgba(255, 255, 0, 0.9)),
  url(./pexels-photo-210186.jpeg);
 background-repeat: no-repeat;
 background-size: cover;
@@ -16,5 +18,5 @@ clip-path: polygon(0px 0px, 100% 0px , 100% 70vh,0px 85vh);
 /* clip-path: circle(20% at 20% 20%); */
 /* https://bennettfeely.com/clippy/ */
 height: 85vh;
-
+width: 50%;
 }

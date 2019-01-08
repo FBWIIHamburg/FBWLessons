@@ -1,0 +1,29 @@
+h1{
+    color: yellow;
+}
+h1{
+    color: blue;
+}
+
+
+h2.hed2{
+    color: green;
+}
+h2{
+    color: red;
+}
+
+#header3{
+    color: brown;
+
+}
+h3.hed3{
+    color: violet;
+    
+}
+/* div article p i{
+    color: violet;
+} */
+div i{
+    color: red;
+}
