@@ -1,0 +1,15 @@
+div>p{
+    /* any paragraph inside div */
+    color: red;
+    font-size: 50px;
+}
+div+p{
+    /* first paragraph after directly a div */
+    color: beige;
+    font-size: 50px;
+}
+div ~ p{
+    /* all paragraphs after  a div */
+    color: cadetblue;
+    font-size: 50px;
+}

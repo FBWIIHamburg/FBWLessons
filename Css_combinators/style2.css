@@ -1,0 +1,21 @@
+/* p::after{
+    content: "  you are a big lier";
+    white-space: pre;
+    background-color: red;
+    color: blue;
+}
+p::before{
+    content: "  What  \A";
+    white-space: pre;
+    background-color: green;
+    color: blue;
+} */
+p::first-letter{
+    font-size: 32px;
+}
+p::first-line{
+    font-size: 32px;
+}
+::selection{
+background-color: yellow;
+color: tomato}

@@ -1,0 +1,64 @@
+/* a:link{
+    color: red;
+}
+a:visited{
+    color: green;
+}
+a:hover{
+    color: gray;
+}
+a:active{
+    color: hotpink;
+} */
+a.spicialA:link{
+    color: red;
+}
+a.spicialA:visited{
+    color: green;
+}
+a.spicialA:hover{
+    color: gray;
+}
+a.spicialA:active{
+    color: hotpink;
+}
+/* div{
+    height: 500px;
+
+}
+div:hover p{
+    display: none;
+} */
+/* p:hover{
+    display: none;
+} */
+
+ p:first-child {
+    color: red;
+}
+input:checked{
+    height: 50px;
+    width: 50px;
+}
+
+input:disabled{
+    border: 3px solid green;
+}
+input:invalid{
+    border: 3px solid red;
+    color: red;
+}
+input:required{
+    border: 3px solid red;
+    color: red;
+    background-color: yellowgreen;
+}
+q:lang(de){
+    quotes: "/" "/";
+}
+q:lang(en){
+    quotes: "&" "&";
+}
+input:in-range{
+ border :2px solid green;
+}
