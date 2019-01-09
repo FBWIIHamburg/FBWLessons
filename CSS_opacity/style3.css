@@ -27,5 +27,5 @@ clip-path: polygon(0px 0px, 100% 0px , 100% 70vh,0px 85vh);
 /* clip-path: circle(20% at 20% 20%); */
 /* https://bennettfeely.com/clippy/ */
 height: 85vh;
-width: 50%;
+/* width: 50%; */
 }

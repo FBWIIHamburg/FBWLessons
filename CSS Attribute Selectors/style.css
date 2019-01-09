@@ -1,0 +1,37 @@
+a[target]{
+    color: red;
+}
+input[type=text]{/*only text input*/
+    background-color: yellow;
+}
+input[type=number]{/*only number input*/
+    background-color: blue;
+}
+input[type=email]{/*only email input*/
+    background-color: green;
+}
+input[type=date]{/*only date input*/
+    background-color: violet;
+}
+input:valid{/*only valid input*/
+    border:3px solid green;
+}
+
+/*only paragraphs which the title 
+contains the word (this)*/
+p[title~="this"]{
+    /*
+    p[title*="this"] same selector
+    */
+    background-color: red;
+    font-size: 30px;
+}
+p[title^="I"]{
+    /*only paragraphs which the 
+    title begin the word (t)*/
+    background-color: green;
+    font-size: 30px;
+}
+
+
+
