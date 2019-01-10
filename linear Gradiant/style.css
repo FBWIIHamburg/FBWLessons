@@ -1,0 +1,17 @@
+body{
+    height: 100vh;
+    /* background-image: linear-gradient(  to right top , rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5),rgba(0, 128, 0, 0.5),rgba(238, 130, 238, 0.5),rgba(255, 192, 203, 0.5),rgba(0, 0, 0, 0.5)),
+    url(./pexels-photo-210186.jpeg); */
+    background-image: radial-gradient( 
+         rgba(255, 0, 0, 0.5),
+          rgba(255, 255, 0, 0.5),
+          rgba(0, 128, 0, 0.5),
+          rgba(238, 130, 238, 0.5),
+          rgba(255, 192, 203, 0.5),
+          rgba(0, 0, 0, 0.5)),
+    url(./pexels-photo-210186.jpeg);
+background-repeat: no-repeat;
+background-position: top;
+background-size: cover;
+    
+}

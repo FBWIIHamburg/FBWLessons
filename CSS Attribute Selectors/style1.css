@@ -1,0 +1,13 @@
+input[type=text]{
+    width: 100%;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-width: 2px;
+    border-style: outset;
+    border-color: #555;
+    outline: none;
+}
+input[type=text]:focus{
+    background-color: lightblue;
+    border: 6px solid #555;
+}
