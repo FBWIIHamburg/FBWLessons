@@ -1,0 +1,31 @@
+div.transition-div{
+    background-color:red;
+    width: 400px;
+    height: 400px;
+    font-size: 4rem;
+border:2px solid black;
+transition: background-color 1s,transform 0.5s,width 5s,opacity 2s;
+/* transition-property: width;
+transition-duration: 2s; */
+transition-timing-function:  ease-out;
+transition-delay: 1s;
+opacity:0 ;
+
+}
+.togelbox:checked + .transition-div{
+background-color:yellow;
+width: 600px;
+transform: matrix(1,0.6,-0.3,1,100,100);
+opacity: 1;
+}
+marquee{
+    transition: background-color 1s,transform 0.5s,width 5s,opacity 2s;
+    width: 400px;
+    background-color:green;
+}
+marquee:hover{
+    background-color:yellow;
+    width: 200px;
+transform: matrix(1,0.6,-0.3,1,100,100);
+opacity: 1;
+}
