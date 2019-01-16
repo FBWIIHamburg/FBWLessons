@@ -1,0 +1,60 @@
+html{
+    font-size: 62.5%;
+}
+div.translated-div{
+    background-color:red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    font-size: 4rem;
+    transform: translate(-100px,50px);
+    margin: 50px;
+
+
+}
+div.rotated-div{
+    background-color:red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    font-size: 4rem;
+    transform: rotate(30deg);
+    margin: 100px;
+
+
+}
+div.scaled-div{
+    background-color:red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    font-size: 4rem;
+    transform: scale(2,0.5);
+    margin: 100px;
+
+
+}
+
+div.skewed-div{
+    background-color:red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    font-size: 4rem;
+    transform: skewX(30deg);
+    margin: 100px;
+
+
+}
+div.matrix-div{
+    background-color:red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    font-size: 4rem;
+    /* transform:matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()); */
+    transform: matrix(2,0.3,0,0.5,50,1);
+    margin: 100px;
+
+
+}

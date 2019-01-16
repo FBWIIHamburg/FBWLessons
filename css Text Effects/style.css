@@ -28,6 +28,6 @@ p.hertext{
     border: 2px solid black;
     width: 200px;
     height: 400px;
-writing-mode: horizontal-bt;
+writing-mode: vertical-lr;
 
 }
