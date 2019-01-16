@@ -1,0 +1,33 @@
+p.oftext{
+    border: 2px solid black;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis ;
+}
+p.oftext:hover{
+    overflow: visible;
+}
+
+p.wrtext{
+    border: 2px solid black;
+    width: 200px;
+    word-wrap: break-word;
+}
+p.wbtext{
+    border: 2px solid black;
+    width: 200px;
+word-break: keep-all;
+}
+p.wbtext2{
+    border: 2px solid black;
+    width: 200px;
+word-break: break-all;
+}
+p.hertext{
+    border: 2px solid black;
+    width: 200px;
+    height: 400px;
+writing-mode: horizontal-bt;
+
+}
