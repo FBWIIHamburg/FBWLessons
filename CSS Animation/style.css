@@ -89,7 +89,7 @@ div.moved>div>:nth-child(1){
     }
     100%{
         opacity: 1;
-        transform: translateX(0);
+        transform: translate(0,0);
     }
     }
 div.moved>div>:nth-child(2){
