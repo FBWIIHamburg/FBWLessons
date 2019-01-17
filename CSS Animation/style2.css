@@ -18,3 +18,9 @@ column-width: 100px;
 .newspaper h1{
     column-span: all;
 }
+img{
+    width: 200px;
+    display: inline;
+    float: left;
+    margin: 5px;
+}
