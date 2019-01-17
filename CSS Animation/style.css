@@ -44,32 +44,36 @@ div.moved{
     border: 3px solid black;
     animation-name: moveRight;
     animation-duration: 1s;
-    animation-delay: 0.5s;
+    animation-delay: 0.2s;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 10rem;
     /* animation-direction: alternate; */
     /* animation-iteration-count: infinite; */
     animation-timing-function: cubic-bezier(.33,1.31,.63,.02);
     animation-fill-mode: backwards;
-
+position: relative;
     
 }
 @keyframes titleAnimation{
     0%{
         opacity: 0;
-        transform: translateX(10rem);
+        transform: translate(10rem,-50%);
     }
     80%{
         
-        transform: translateX(-3rem);
+        transform: translate(-60%,-50%);
     }
     100%{
         opacity: 1;
-        transform: translateX(0);
+        transform: translate(-50%,-50%);
     }
     }
 div.moved>div>:nth-child(1){
     text-align: center;
     font-size: 5rem;
-    margin-top: 30rem;
+    /* margin-top: 30rem; */
     animation-name: titleAnimation;
     animation-duration: 1s;
     animation-delay: 1.5s;
@@ -77,6 +81,11 @@ div.moved>div>:nth-child(1){
     /* animation-iteration-count: infinite; */
     /* animation-timing-function: cubic-bezier(.33,1.31,.63,.02); */
     animation-fill-mode: backwards;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
 }
 @keyframes titleAnimation1{
     0%{
@@ -89,13 +98,13 @@ div.moved>div>:nth-child(1){
     }
     100%{
         opacity: 1;
-        transform: translate(0,0);
+        transform: translate(-50%,-50%);
     }
     }
 div.moved>div>:nth-child(2){
     text-align: center;
     font-size: 5rem;
-    margin-top: 1rem;
+    margin-top: 5rem;
     animation-name: titleAnimation1;
     animation-duration: 1s;
     animation-delay: 1.5s;
@@ -103,4 +112,15 @@ div.moved>div>:nth-child(2){
     /* animation-iteration-count: infinite; */
     /* animation-timing-function: cubic-bezier(.33,1.31,.63,.02); */
     animation-fill-mode: backwards;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.logo{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width:10rem;
+
 }
