@@ -1,0 +1,50 @@
+:root{
+    --first-color:rgba(42, 238, 238, 0.856);
+    --second-color:rgba(226, 76, 38, 0.856);
+    --third-color:rgba(110, 33, 117, 0.856);
+    --header-font-size:4rem;
+    --text-font-size:2rem;
+
+
+}
+/* section{
+    try to over write a varialbe
+    --second-color:rgba(20, 17, 16, 0.856);
+} */
+
+div{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    margin: 50px;
+    float: left;
+    background-color: lightblue;
+}
+div:nth-child(1){
+    background-color: var(--first-color);
+}
+div:nth-child(2){
+    background-color: var(--second-color);
+}
+div:nth-child(3){
+    background-color: var(--third-color);
+}
+div:nth-child(4){
+    background-color: var(--first-color);
+}
+div:nth-child(5){
+    background-color: var(--second-color);
+}
+div:nth-child(6){
+    background-color: var(--third-color);
+}
+h1{
+    font-size: var(--header-font-size);
+}
+p{
+    font-size: var(--text-font-size);
+    
+}
+h1::after{
+    content: "Ahmad Osman";
+}

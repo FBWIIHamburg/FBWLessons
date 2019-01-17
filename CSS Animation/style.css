@@ -22,6 +22,8 @@ div.animated{
     animation-name: slowShow;
     animation-duration: 10s;
     animation-delay: 2s;
+margin: 50px;
+    resize: both;
     
 }
 @keyframes moveRight{
@@ -123,4 +125,15 @@ div.moved>div>:nth-child(2){
     left: 1rem;
     width:10rem;
 
+}
+
+div.resized{
+    width: 20rem;
+    opacity: 1;
+    background-color: lightblue;
+    border: 3px solid black;
+    margin: 50px;
+    resize: vertical;
+    overflow: auto;
+    
 }

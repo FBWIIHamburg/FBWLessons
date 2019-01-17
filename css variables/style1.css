@@ -1,0 +1,16 @@
+form>div>label{
+   display: inline-block;
+   min-width: 150px;
+   font-size: 2rem;
+}
+form>div>input{
+    min-width: 300px;
+    
+}
+form>div{
+    margin: 50px;
+}
+input:required+span::after{
+    content: '*' ;
+    color: red;
+}
