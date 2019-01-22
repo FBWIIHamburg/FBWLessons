@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+
+}
+html{
+    font-size: 62.5%;
+}
+.rightNav{
+    position: absolute;
+    width: 30rem;
+    background-color: red;
+    right:0px;
+    height: 40rem;
+    font-size: 2rem;
+    padding: 1rem;
+    display: none;
+}
+.container>input{
+    display: none;
+}
+.container>label{
+    font-size: 3rem;
+    position: absolute;
+    right: 0.5rem;
+}
+
+.container>input:checked + .rightNav{
+    display: block;
+}
