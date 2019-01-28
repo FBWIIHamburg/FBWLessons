@@ -1,0 +1,67 @@
+html {
+  font-size: 62.5%;
+  font-family: Helvetica, sans-serif;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  color: #9b19c8;
+}
+
+h2 {
+  color: #9b1900;
+}
+
+.container {
+  font-family: Helvetica, sans-serif;
+}
+
+.container > h3 {
+  text-decoration: underline;
+}
+
+.container > h3::after {
+  content: " ______________ ";
+  color: gray;
+}
+
+.container > h3:hover {
+  color: red;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+ul li {
+  float: left;
+  padding-left: 10px;
+}
+
+ul li::after {
+  content: "/";
+  color: red;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #9b19c8;
+  display: block;
+  background-color: gray;
+}
+
+ul li a:hover {
+  background-color: wheat;
+}
+/*# sourceMappingURL=style.css.map */
