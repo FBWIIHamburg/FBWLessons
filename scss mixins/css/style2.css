@@ -1,0 +1,59 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  border: 0.5rem solid red;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container > div:nth-child(1) {
+  position: absolute;
+  border-width: 0.5rem;
+  border-style: solid;
+  width: 20rem;
+  height: 20rem;
+  border-color: red;
+  background-color: red;
+  top: 20rem;
+  left: 20rem;
+  z-index: 1;
+}
+
+.container > div:nth-child(2) {
+  position: absolute;
+  border-width: 0.5rem;
+  border-style: solid;
+  width: 20rem;
+  height: 20rem;
+  border-color: blue;
+  background-color: blue;
+  top: 35rem;
+  left: 35rem;
+  z-index: 0;
+}
+
+.container > div:nth-child(3) {
+  position: absolute;
+  border-width: 0.5rem;
+  border-style: solid;
+  width: 20rem;
+  height: 20rem;
+  border-color: black;
+  background-color: black;
+  top: 50rem;
+  left: 50rem;
+  z-index: 2;
+}
+/*# sourceMappingURL=style2.css.map */

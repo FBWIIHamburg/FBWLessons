@@ -1,0 +1,29 @@
+@import 'setting';
+
+$color1:rgb(187, 36, 36);
+$color2:rgb(49, 72, 173);
+$color3:rgb(38, 204, 33);
+$font1:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$font2:Helvetica, sans-serif;
+$size1: 2rem;
+$size2: 4rem;
+$size3: 6rem;
+
+@mixin mainFont($colorVal , $fontVal, $fontSizeVal ) {
+    
+    font-family: $fontVal ;
+    color: $colorVal;
+    font-size: $fontSizeVal;
+    
+}
+
+.container{
+    @include mainFont($color1,$font1,$size2); 
+}
+.title{
+    @include mainFont($color2,$font2,$size1); 
+    text-decoration: underline;
+}
+.article{
+    @include mainFont(gray,'Lucida Sans Unicode',1.5rem); 
+}

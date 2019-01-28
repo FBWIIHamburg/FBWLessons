@@ -1,0 +1,36 @@
+@import 'setting';
+
+
+@mixin boxDiv($color,$top,$left,$zindex) {
+    position: absolute;
+    border-width:0.5rem;
+    border-style: solid;
+    width: 20rem;
+    height: 20rem;
+    border-color: $color;
+    background-color:$color;
+    top:$top;
+    left:$left;
+    z-index: $zindex;
+
+
+}
+.container{
+    border: 0.5rem solid red;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    
+    &>div:nth-child(1){
+        @include boxDiv(red,20rem ,20rem , 1);
+
+    }
+    &>div:nth-child(2){
+        @include boxDiv(blue,35rem ,35rem , 0);
+
+    }
+    &>div:nth-child(3){
+        @include boxDiv(black,50rem ,50rem , 2);
+
+    }
+}

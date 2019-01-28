@@ -1,0 +1,32 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #bb2424;
+  font-size: 4rem;
+}
+
+.title {
+  font-family: Helvetica, sans-serif;
+  color: #3148ad;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.article {
+  font-family: "Lucida Sans Unicode";
+  color: gray;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=style.css.map */
