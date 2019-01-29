@@ -1,17 +1,14 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html{
-    font-size: 62.5%;
-}
+@import 'setting';
 
-@keyframes slowShow{
-from{opacity: 0;}
-to{opacity:1;}
-}
 
+@mixin Animation($animationName ,$animationDuration , $animationDelay , $animationFillMode , $animationTimingFunction ) {
+    animation-name: $animationName;
+    animation-duration: $animationDuration;
+    animation-delay: $animationDelay;
+    animation-fill-mode: $animationFillMode;
+    animation-timing-function: $animationTimingFunction;
+    
+}
 
 div.animated{
     width: 20rem;
@@ -19,23 +16,12 @@ div.animated{
     opacity: 1;
     background-color: red;
     border: 3px solid black;
-    animation-name: slowShow;
-    animation-duration: 10s;
-    animation-delay: 2s;
     margin: 50px;
     resize: both;
+    @include Animation(slowShow,10s ,2s ,initial ,initial );
     
 }
-@keyframes moveRight{
-    from{
-        transform: translateX(-100%);
-        
-    }
-    to{
-        transform: translateX(0);
-        
-    }
-    }
+
 div.moved{
     height: 80vh;
     clip-path: polygon(0 0,100% 0,100% 60vh,0 80vh);
@@ -44,20 +30,71 @@ div.moved{
     background-size: cover;
     background-repeat: no-repeat;
     border: 3px solid black;
-    animation-name: moveRight;
-    animation-duration: 1s;
-    animation-delay: 0.2s;
     margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-bottom: 10rem;
-    /* animation-direction: alternate; */
-    /* animation-iteration-count: infinite; */
-    animation-timing-function: cubic-bezier(.33,1.31,.63,.02);
-    animation-fill-mode: backwards;
-position: relative;
+    margin-bottom: 10rem;  
+    position: relative;
+    @include Animation(moveRight,1s ,0.2s ,backwards , cubic-bezier(.33,1.31,.63,.02));
+    &>div>:nth-child(1){
+        text-align: center;
+        font-size: 5rem;
+        /* margin-top: 30rem; */
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        @include Animation(titleAnimation,1s ,1.5s ,backwards ,initial );
+       
+    }
+    &>div>:nth-child(2){
+        text-align: center;
+        font-size: 5rem;
+        margin-top: 5rem;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        @include Animation(titleAnimation1,1s ,1.5s ,backwards ,initial );
+    }
+    &>.logo{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        width:10rem;
+    
+    }
+}
+div.resized{
+    width: 20rem;
+    opacity: 1;
+    background-color: lightblue;
+    border: 3px solid black;
+    margin: 50px;
+    resize: vertical;
+    overflow: auto;
     
 }
+.newDiv{
+    border: 2px solid black;
+    height: 20rem;
+    background-color: aqua;
+    @include Animation(newDivAnimation,2s ,1s ,backwards ,cubic-bezier(.44,1.39,.82,-0.06) );
+}
+@keyframes newDivAnimation{
+    0%{
+        opacity: 0;
+        width:0;
+    }
+    80%{
+        
+        width:50%;
+    }
+    100%{
+        opacity: 1;
+        width:100%;
+    }
+    }
 @keyframes titleAnimation{
     0%{
         opacity: 0;
@@ -72,23 +109,7 @@ position: relative;
         transform: translate(-50%,-50%);
     }
     }
-div.moved>div>:nth-child(1){
-    text-align: center;
-    font-size: 5rem;
-    /* margin-top: 30rem; */
-    animation-name: titleAnimation;
-    animation-duration: 1s;
-    animation-delay: 1.5s;
-    /* animation-direction: alternate; */
-    /* animation-iteration-count: infinite; */
-    /* animation-timing-function: cubic-bezier(.33,1.31,.63,.02); */
-    animation-fill-mode: backwards;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-   
-}
+
 @keyframes titleAnimation1{
     0%{
         opacity: 0;
@@ -103,37 +124,18 @@ div.moved>div>:nth-child(1){
         transform: translate(-50%,-50%);
     }
     }
-div.moved>div>:nth-child(2){
-    text-align: center;
-    font-size: 5rem;
-    margin-top: 5rem;
-    animation-name: titleAnimation1;
-    animation-duration: 1s;
-    animation-delay: 1.5s;
-    /* animation-direction: alternate; */
-    /* animation-iteration-count: infinite; */
-    /* animation-timing-function: cubic-bezier(.33,1.31,.63,.02); */
-    animation-fill-mode: backwards;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-.logo{
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    width:10rem;
+    @keyframes moveRight{
+        from{
+            transform: translateX(-100%);
+            
+        }
+        to{
+            transform: translateX(0);
+            
+        }
+        }
+@keyframes slowShow{
+        from{opacity: 0;}
+        to{opacity:1;}
+        }
 
-}
-
-div.resized{
-    width: 20rem;
-    opacity: 1;
-    background-color: lightblue;
-    border: 3px solid black;
-    margin: 50px;
-    resize: vertical;
-    overflow: auto;
-    
-}
