@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@-webkit-keyframes slowShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slowShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+div.animated {
+  width: 20rem;
+  height: 20rem;
+  opacity: 1;
+  background-color: red;
+  border: 3px solid black;
+  -webkit-animation-name: slowShow;
+          animation-name: slowShow;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  margin: 50px;
+  resize: both;
+}
+
+@-webkit-keyframes moveRight {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+div.moved {
+  height: 80vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 80vh);
+          clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 80vh);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 128, 0, 0.418)), color-stop(rgba(255, 0, 0, 0.39)), to(rgba(255, 166, 0, 0.37))), url(../hero.jpg);
+  background-image: linear-gradient(to right, rgba(0, 128, 0, 0.418), rgba(255, 0, 0, 0.39), rgba(255, 166, 0, 0.37)), url(../hero.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 3px solid black;
+  -webkit-animation-name: moveRight;
+          animation-name: moveRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 10rem;
+  /* animation-direction: alternate; */
+  /* animation-iteration-count: infinite; */
+  -webkit-animation-timing-function: cubic-bezier(0.33, 1.31, 0.63, 0.02);
+          animation-timing-function: cubic-bezier(0.33, 1.31, 0.63, 0.02);
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  position: relative;
+}
+
+@-webkit-keyframes titleAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(10rem, -50%);
+            transform: translate(10rem, -50%);
+  }
+  80% {
+    -webkit-transform: translate(-60%, -50%);
+            transform: translate(-60%, -50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(10rem, -50%);
+            transform: translate(10rem, -50%);
+  }
+  80% {
+    -webkit-transform: translate(-60%, -50%);
+            transform: translate(-60%, -50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+div.moved > div > :nth-child(1) {
+  text-align: center;
+  font-size: 5rem;
+  /* margin-top: 30rem; */
+  -webkit-animation-name: titleAnimation;
+          animation-name: titleAnimation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  /* animation-direction: alternate; */
+  /* animation-iteration-count: infinite; */
+  /* animation-timing-function: cubic-bezier(.33,1.31,.63,.02); */
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes titleAnimation1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10rem, -10rem);
+            transform: translate(-10rem, -10rem);
+  }
+  80% {
+    -webkit-transform: translate(3rem, 3rem);
+            transform: translate(3rem, 3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes titleAnimation1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10rem, -10rem);
+            transform: translate(-10rem, -10rem);
+  }
+  80% {
+    -webkit-transform: translate(3rem, 3rem);
+            transform: translate(3rem, 3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+div.moved > div > :nth-child(2) {
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 5rem;
+  -webkit-animation-name: titleAnimation1;
+          animation-name: titleAnimation1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  /* animation-direction: alternate; */
+  /* animation-iteration-count: infinite; */
+  /* animation-timing-function: cubic-bezier(.33,1.31,.63,.02); */
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 10rem;
+}
+
+div.resized {
+  width: 20rem;
+  opacity: 1;
+  background-color: lightblue;
+  border: 3px solid black;
+  margin: 50px;
+  resize: vertical;
+  overflow: auto;
+}
+/*# sourceMappingURL=style3.css.map */

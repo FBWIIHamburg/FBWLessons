@@ -22,7 +22,7 @@
     height: 100vh;
     
     &>div:nth-child(1){
-        @include boxDiv(red,20rem ,20rem , 1);
+        @include boxDiv(red,40rem ,40rem , 1);
 
     }
     &>div:nth-child(2){
