@@ -1,0 +1,15 @@
+
+
+.title1{
+    color:red;
+    border: 2px solid lightblue;
+}
+.title2{
+    @extend .title1 ;
+    font-size: 20px;
+    
+}
+.title3{
+    @extend .title2 ;
+    text-decoration: underline;
+}

@@ -1,0 +1,21 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.div1 {
+  float: left;
+  width: 500px;
+  height: 300px;
+  border: 2px solid red;
+}
+
+.div2 {
+  float: left;
+  width: 0;
+  height: 300px;
+  border: 2px solid green;
+}
+/*# sourceMappingURL=style.css.map */

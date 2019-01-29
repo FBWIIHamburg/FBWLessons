@@ -1,0 +1,33 @@
+@import 'defaults';
+
+%fontStyle{
+    color: red;
+    font-size: 2rem;
+}
+
+
+.container{
+border: 2px solid green;
+&>.article{
+
+    &>.title{
+@extend %fontStyle;
+    }
+
+    &>.content{
+color: blue;
+    }
+}
+}
+.someClass{
+    color:green;
+}
+.someClass2{
+   @extend .someClass ;
+   border: 0.2rem solid lightblue;
+}
+.someClass3{
+    @extend .someClass ;
+    border: 0.5rem dotted green;
+    font-size: 3rem;
+}

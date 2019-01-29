@@ -1,0 +1,19 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+$size:500px;
+.div1{
+    float: left;
+    width: $size;
+    height: 300px;
+    border: 2px solid red;
+}
+.div2{
+    float: left;
+    width: 10 % 2;
+    height: 300px;
+    border: 2px solid green;
+}

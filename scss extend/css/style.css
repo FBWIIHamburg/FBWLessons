@@ -1,0 +1,39 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container > .article > .title {
+  color: red;
+  font-size: 2rem;
+}
+
+.container {
+  border: 2px solid green;
+}
+
+.container > .article > .content {
+  color: blue;
+}
+
+.someClass, .someClass2, .someClass3 {
+  color: green;
+}
+
+.someClass2 {
+  border: 0.2rem solid lightblue;
+}
+
+.someClass3 {
+  border: 0.5rem dotted green;
+  font-size: 3rem;
+}
+/*# sourceMappingURL=style.css.map */
