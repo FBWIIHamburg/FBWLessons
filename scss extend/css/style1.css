@@ -1,13 +1,17 @@
-.title1, .title2, .title3 {
-  color: red;
+.title1, .title3, .title2 {
   border: 2px solid lightblue;
+  text-decoration: underline;
 }
 
-.title2, .title3 {
-  font-size: 20px;
+.title1, .title3 {
+  color: red;
+}
+
+.title2 {
+  color: green;
 }
 
 .title3 {
-  text-decoration: underline;
+  color: blue;
 }
 /*# sourceMappingURL=style1.css.map */

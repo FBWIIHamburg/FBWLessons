@@ -1,0 +1,17 @@
+
+
+@mixin styler($bgColor,$fColor,$selector) {
+    #{$selector} {
+        background-color:$bgColor;
+        color: $fColor;
+    }
+    #{$selector}:hover {
+        background-color:lighten($bgColor,10%);
+        color:darken($fColor,20%);
+    }
+}
+
+
+
+
+@include styler(lightblue,orange,".header") ;

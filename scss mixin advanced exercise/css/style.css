@@ -1,0 +1,55 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  border: 3px solid red;
+  height: 70vh;
+}
+
+.container .imagsContainer {
+  height: 70vh;
+  float: left;
+  width: 70%;
+  border: 3px solid black;
+  position: relative;
+}
+
+.container .imagsContainer > img:nth-child(1) {
+  width: 30rem;
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  outline: 2rem solid green;
+}
+
+.container .imagsContainer > img:nth-child(2) {
+  width: 30rem;
+  position: absolute;
+  top: 20rem;
+  left: 20rem;
+  outline: 2rem solid green;
+}
+
+.container .imagsContainer > img:nth-child(3) {
+  width: 30rem;
+  position: absolute;
+  top: 30rem;
+  left: 30rem;
+  outline: 2rem solid green;
+}
+
+.container .textContainer {
+  height: 70vh;
+  float: left;
+  width: 30%;
+  border: 3px solid black;
+}
+/*# sourceMappingURL=style.css.map */

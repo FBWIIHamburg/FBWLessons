@@ -1,15 +1,17 @@
-
-
-.title1{
-    color:red;
+%shared{
     border: 2px solid lightblue;
-}
-.title2{
-    @extend .title1 ;
-    font-size: 20px;
-    
-}
-.title3{
-    @extend .title2 ;
     text-decoration: underline;
 }
+.title1{
+    @extend %shared ;
+    color: red ;
+}
+.title2{
+@extend %shared ;
+color: green;
+}
+.title3{
+    color: blue;
+    @extend .title1 ;
+    
+    }

@@ -1,0 +1,56 @@
+@import 'setting';
+
+
+// @mixin floatDiv($divWidth,$divBorder) {
+//     float: left;
+//     width: $divWidth;
+//     border: $divBorder;
+// }
+
+
+
+@mixin styler() {
+    .container{
+        border: 3px solid red ;
+        height: 70vh;
+        .imagsContainer{
+            height: 70vh;
+            float: left;
+            width: 70%;
+            border: 3px solid black;
+            position: relative;
+            &>img:nth-child(1){
+                width: 30rem;
+                position: absolute;
+                top: 10rem;
+                left: 10rem;
+                outline: 2rem solid green;
+            }
+            &>img:nth-child(2){
+                width: 30rem;
+                position: absolute;
+                top: 20rem;
+                left: 20rem;
+                outline: 2rem solid green;
+
+            }
+            &>img:nth-child(3){
+                width: 30rem;
+                position: absolute;
+                top: 30rem;
+                left: 30rem;
+                outline: 2rem solid green;
+            }
+        }
+        .textContainer{
+            height: 70vh;
+            float: left;
+            width: 30%;
+            border: 3px solid black;
+        }
+
+    }
+    
+}
+
+@include styler();
