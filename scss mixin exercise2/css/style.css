@@ -1,0 +1,21 @@
+.container div:nth-child(1) {
+  width: 500px;
+  background-color: red;
+  height: 10vh;
+  border: 2px solid black;
+}
+
+.container div:nth-child(2) {
+  width: 500px;
+  background-color: red;
+  height: 10vh;
+  border: 2px solid black;
+}
+
+.container div:nth-child(3) {
+  width: 500px;
+  background-color: red;
+  height: 10vh;
+  border: 2px solid black;
+}
+/*# sourceMappingURL=style.css.map */

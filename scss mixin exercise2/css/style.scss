@@ -1,0 +1,39 @@
+
+@mixin Styler2($bgColor) {
+    background-color: $bgColor;
+    height: 10vh;
+    border:2px solid black;
+}
+
+@mixin divStyler($divWidth,$bgColor) {
+    // div:nth-child(1){
+    //     width: $divWidth;
+    //     @include Styler2($bgColor);
+    // }
+    // div:nth-child(2){
+    //     width: $divWidth/2;
+    //     @include Styler2(lighten( $bgColor,25%));
+    // }
+    // div:nth-child(3){
+    //     width: $divWidth/4;
+    //     @include Styler2(lighten( $bgColor,50%));
+
+    // }
+    @for $var from 1 to 4 {
+        #{"div:nth-child("+$var+")"}{
+            width: $divWidth;
+            @include Styler2($bgColor);
+        }
+    }
+}
+.container{
+        @include divStyler(500px,red);
+}
+// $someVar:green;
+// @for $var from 0 to 5 {
+
+//     #{".div"+$var}
+//     {color:$someVar;}
+//     $someVar:lighten($someVar,20%);
+
+// }
