@@ -1,12 +1,11 @@
 @import 'setting';
 
-
-// @mixin floatDiv($divWidth,$divBorder) {
-//     float: left;
-//     width: $divWidth;
-//     border: $divBorder;
-// }
-
+@mixin floatDiv($divWidth,$divBorder) {
+    float: left;
+    height: 70vh;
+    width: $divWidth;
+    border: $divBorder;
+}
 @mixin imageStyler($imageNum,$width,$top,$left) {
     #{"img:nth-child("$imageNum")"}{
         width: $width;
@@ -16,39 +15,20 @@
         outline: 2rem solid green;
     }
 }
-
-
-
-
-
-
-
 @mixin styler() {
     .container{
         border: 3px solid red ;
         height: 70vh;
         .imagsContainer{
-            height: 70vh;
-            float: left;
-            width: 70%;
-            border: 3px solid black;
             position: relative;
-            
+            @include floatDiv(70%,3px solid black );
             @include imageStyler(1,35rem,10rem,10rem);
             @include imageStyler(2,40rem,20rem,20rem);
             @include imageStyler(3,20rem,10rem,30rem);
-
-            
         }
         .textContainer{
-            height: 70vh;
-            float: left;
-            width: 30%;
-            border: 3px solid black;
+            @include floatDiv(30%, 3px solid black)
         }
-
     }
-    
 }
-
 @include styler();

@@ -15,11 +15,11 @@ html {
 }
 
 .container .imagsContainer {
-  height: 70vh;
+  position: relative;
   float: left;
+  height: 70vh;
   width: 70%;
   border: 3px solid black;
-  position: relative;
 }
 
 .container .imagsContainer img:nth-child(1) {
@@ -47,8 +47,8 @@ html {
 }
 
 .container .textContainer {
-  height: 70vh;
   float: left;
+  height: 70vh;
   width: 30%;
   border: 3px solid black;
 }
