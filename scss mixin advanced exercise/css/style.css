@@ -22,26 +22,26 @@ html {
   position: relative;
 }
 
-.container .imagsContainer > img:nth-child(1) {
-  width: 30rem;
+.container .imagsContainer img:nth-child(1) {
+  width: 35rem;
   position: absolute;
   top: 10rem;
   left: 10rem;
   outline: 2rem solid green;
 }
 
-.container .imagsContainer > img:nth-child(2) {
-  width: 30rem;
+.container .imagsContainer img:nth-child(2) {
+  width: 40rem;
   position: absolute;
   top: 20rem;
   left: 20rem;
   outline: 2rem solid green;
 }
 
-.container .imagsContainer > img:nth-child(3) {
-  width: 30rem;
+.container .imagsContainer img:nth-child(3) {
+  width: 20rem;
   position: absolute;
-  top: 30rem;
+  top: 10rem;
   left: 30rem;
   outline: 2rem solid green;
 }

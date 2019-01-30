@@ -7,6 +7,20 @@
 //     border: $divBorder;
 // }
 
+@mixin imageStyler($imageNum,$width,$top,$left) {
+    #{"img:nth-child("$imageNum")"}{
+        width: $width;
+        position: absolute;
+        top: $top;
+        left: $left;
+        outline: 2rem solid green;
+    }
+}
+
+
+
+
+
 
 
 @mixin styler() {
@@ -19,28 +33,12 @@
             width: 70%;
             border: 3px solid black;
             position: relative;
-            &>img:nth-child(1){
-                width: 30rem;
-                position: absolute;
-                top: 10rem;
-                left: 10rem;
-                outline: 2rem solid green;
-            }
-            &>img:nth-child(2){
-                width: 30rem;
-                position: absolute;
-                top: 20rem;
-                left: 20rem;
-                outline: 2rem solid green;
+            
+            @include imageStyler(1,35rem,10rem,10rem);
+            @include imageStyler(2,40rem,20rem,20rem);
+            @include imageStyler(3,20rem,10rem,30rem);
 
-            }
-            &>img:nth-child(3){
-                width: 30rem;
-                position: absolute;
-                top: 30rem;
-                left: 30rem;
-                outline: 2rem solid green;
-            }
+            
         }
         .textContainer{
             height: 70vh;
