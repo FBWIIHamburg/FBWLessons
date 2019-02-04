@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.a1::after, .a2::after, .a3::after, .a4::after, .a5::after, .a6::after, .a7::after, .a8::after, .a9::after, .a10::after, .a11::after, .a12::after, .a13::after, .a14::after, .a15::after, .a16::after, .a17::after, .a18::after, .a19::after {
+  font-size: 2rem;
+}
+
+.a1::after {
+  content: "a1";
+  font-size: 1rem;
+}
+
+.a2::after {
+  content: "a2";
+  font-size: 2rem;
+}
+
+.a3::after {
+  content: "a3";
+  font-size: 3rem;
+}
+
+.a4::after {
+  content: "a4";
+  font-size: 4rem;
+}
+
+.a5::after {
+  content: "a5";
+  font-size: 5rem;
+}
+
+.a6::after {
+  content: "a6";
+  font-size: 6rem;
+}
+
+.a7::after {
+  content: "a7";
+  font-size: 7rem;
+}
+
+.a8::after {
+  content: "a8";
+  font-size: 8rem;
+}
+
+.a9::after {
+  content: "a9";
+  font-size: 9rem;
+}
+
+.a10::after {
+  content: "a10";
+  font-size: 10rem;
+}
+
+.a11::after {
+  content: "a11";
+  font-size: 11rem;
+}
+
+.a12::after {
+  content: "a12";
+  font-size: 12rem;
+}
+
+.a13::after {
+  content: "a13";
+  font-size: 13rem;
+}
+
+.a14::after {
+  content: "a14";
+  font-size: 14rem;
+}
+
+.a15::after {
+  content: "a15";
+  font-size: 15rem;
+}
+
+.a16::after {
+  content: "a16";
+  font-size: 16rem;
+}
+
+.a17::after {
+  content: "a17";
+  font-size: 17rem;
+}
+
+.a18::after {
+  content: "a18";
+  font-size: 18rem;
+}
+
+.a19::after {
+  content: "a19";
+  font-size: 19rem;
+}
+/*# sourceMappingURL=style.css.map */

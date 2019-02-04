@@ -1,0 +1,15 @@
+@import "setting";
+
+
+%sharedClass{
+    font-size: 2rem;
+}
+
+@for $var from 1 to 20 {
+    #{".a"+$var}::after{
+        content: "a"+$var;
+        @extend %sharedClass;
+        font-size: $var + 0rem;
+    }
+
+}

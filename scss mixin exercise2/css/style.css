@@ -6,16 +6,36 @@
 }
 
 .container div:nth-child(2) {
-  width: 500px;
+  width: 250px;
   background-color: red;
   height: 10vh;
   border: 2px solid black;
 }
 
 .container div:nth-child(3) {
-  width: 500px;
+  width: 125px;
   background-color: red;
   height: 10vh;
   border: 2px solid black;
+}
+
+.div0 {
+  color: green;
+}
+
+.div1 {
+  color: #00e600;
+}
+
+.div2 {
+  color: #4dff4d;
+}
+
+.div3 {
+  color: #b3ffb3;
+}
+
+.div4 {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
