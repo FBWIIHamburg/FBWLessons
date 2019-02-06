@@ -1,0 +1,28 @@
+@import "setting";
+%Height{
+    height: 5rem;
+}
+.container{
+    @for $var from 1 to 21 {
+        #{"article:nth-child("+$var+")"}{
+            @extend %Height;
+
+            @if $var==3 {
+             background-color: green;
+            }
+            @else{
+                background-color: darken(white, $var*5%);
+            }
+            
+            
+        }
+        #{"article:nth-child("+$var+")::after"}{
+            content: $var+"";
+            margin: 50%;
+
+            @if $var > 10 {
+             color: white;
+            }
+        }
+    }
+}

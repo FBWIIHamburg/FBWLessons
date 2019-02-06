@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+.mainPage{
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;;
+    background-color: lightblue;
+    height: 60vh;
+}
+
+.mainPage span{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mainPage .tabs{
+    width: 100%;
+
+}
+
+.mainPage .tabContainer{
+    width: 100%;
+    padding: 30px;
+}
+.mainPage .tabs a{
+    width: 33.33%;
+    text-decoration: none;
+    font-size: 2rem;
+    float: left;
+    text-align: center;
+    background-color: gray;
+    height: 50px;
+    padding-top: 10px;
+    color: black;
+}
+.mainpage .tabs .tab1{
+    background-color: white;
+    border-top: 3px solid red;
+}
+#show1:target ~ .mainDiv .tabContainer .two, .three{
+    display: none;
+}
+#show1:target ~ .mainDiv .tabContainer .one{
+    display: block;
+}
+#show1:target ~ .mainDiv .tabs .tab1{
+    background-color: white;
+    border-top: 3px solid red;
+
+}
+#show1:target ~ .mainDiv .tabs .tab2,
+#show1:target ~ .mainDiv .tabs .tab3{
+    background-color: gray;
+    border: 3px solid lightgreen;
+}
+
+
+#show2:target ~ .mainDiv .tabContainer .one, .three{
+    display: none;
+}
+#show2:target ~ .mainDiv .tabContainer .two{
+    display: block;
+}
+#show2:target ~ .mainDiv .tabs .tab2{
+    background-color: white;
+    border-top: 3px solid red;
+
+}
+#show2:target ~ .mainDiv .tabs .tab1,
+#show2:target ~ .mainDiv .tabs .tab3{
+    background-color: gray;
+    border: 3px solid lightgreen;
+}
+
+
+
+#show3:target ~ .mainDiv .tabContainer .two, .one{
+    display: none;
+}
+#show3:target ~ .mainDiv .tabContainer .three{
+    display: block;
+}
+#show3:target ~ .mainDiv .tabs .tab3{
+    background-color: white;
+    border-top: 3px solid red;
+
+}
+#show3:target ~ .mainDiv .tabs .tab1,
+#show3:target ~ .mainDiv .tabs .tab2{
+    background-color: gray;
+    border: 3px solid lightgreen;
+}
+
+
+
+
+

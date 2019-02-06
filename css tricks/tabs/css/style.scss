@@ -1,0 +1,17 @@
+@import "setting";
+
+@mixin changer($selector,$value) {
+    #{$selector}{
+        display: $value;
+    }
+}
+
+@include changer(".div1",block);
+@include changer(".div2,.div3",none);
+@include changer("#span1:target ~ .div1",block);
+@include changer("#span1:target ~ .div3,#span1:target ~ .div2",none);
+@include changer("#span2:target ~ .div2",block);
+@include changer("#span2:target ~ .div3,#span2:target ~ .div1",none);
+@include changer("#span3:target ~ .div3",block);
+@include changer("#span3:target ~ .div1,#span3:target ~ .div2",none);
+

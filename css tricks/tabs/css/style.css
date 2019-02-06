@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.div1 {
+  display: block;
+}
+
+.div2, .div3 {
+  display: none;
+}
+
+#span1:target ~ .div1 {
+  display: block;
+}
+
+#span1:target ~ .div3, #span1:target ~ .div2 {
+  display: none;
+}
+
+#span2:target ~ .div2 {
+  display: block;
+}
+
+#span2:target ~ .div3, #span2:target ~ .div1 {
+  display: none;
+}
+
+#span3:target ~ .div3 {
+  display: block;
+}
+
+#span3:target ~ .div1, #span3:target ~ .div2 {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
