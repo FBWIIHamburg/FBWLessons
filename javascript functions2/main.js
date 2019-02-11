@@ -43,3 +43,10 @@ function fun3(z , y){
 fun3(50,100);
 fun3(1,1);
 
+function fun4(x , y){
+    console.log("f(x , y) = x + y");
+    console.log("f("+x+" , "+y+") = "+x+" + "+y);
+    console.log("f("+x+" , "+y+") = "+(x+y));
+}
+
+fun4(2,3); 
