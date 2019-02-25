@@ -1,0 +1,7 @@
+.someclass{
+    font-size: 25px;
+}
+
+p.someclass{
+    border:2px solid black;
+}
