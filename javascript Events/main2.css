@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.bubble{
+    border-radius: 50%;
+    position: absolute;
+    width:10px ;
+    height: 10px;
+    background-color: lightblue;
+    left: 0;
+}
