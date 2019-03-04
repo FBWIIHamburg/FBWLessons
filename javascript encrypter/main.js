@@ -17,7 +17,7 @@ function decrypter(code,key){
         //storage += numbersArr[i];
     }
 
-console.log(storage);
+return storage;
 }
 let encryptedText="52000,50500,54000,54000,55500,16000,16000,36500,16000,48500,54500,16000,32500,52000,54500,48500,50000";
-decrypter(encryptedText,500);
+console.log(decrypter(encryptedText,500));
