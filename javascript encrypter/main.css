@@ -1,0 +1,51 @@
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+.textdiv{
+    flex-grow:2; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+label{
+    font-size: 3rem;
+}
+.codediv{
+    flex-grow:2; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.buttonsdiv{
+    flex-grow:1; 
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.keydiv{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+#inputText{
+    height: 20vh;
+    resize: none;
+}
+#inputcode{
+    height: 20vh;
+    resize: none;
+}
