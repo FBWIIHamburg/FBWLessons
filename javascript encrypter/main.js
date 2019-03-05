@@ -5,7 +5,7 @@ function encrypter(text,key){
     }
     return storage.join(",");
 }
-console.log(encrypter("hello  I am Ahmad",500));
+//console.log(encrypter("hello  I am Ahmad",500));
 
 
 function decrypter(code,key){

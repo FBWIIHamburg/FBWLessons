@@ -1,0 +1,22 @@
+.container{
+    position: relative;
+    width:50vw;
+    height: 40vh;
+    overflow: hidden;
+}
+.container img{
+    position: absolute;
+    width:50vw;
+    height: 40vh;
+    top: -40vh;
+    left: -50vw;
+    transition: all 2s cubic-bezier(.54,1.62,.45,-0.92);
+    /* transform: skew() */
+    transform-style: preserve-3d;
+    
+}
+.container img:nth-child(1){
+    
+    top: 0;
+    left: 0;
+}
