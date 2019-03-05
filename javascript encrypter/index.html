@@ -18,10 +18,10 @@
             <div class="buttonsdiv">
                 <div class="keydiv">
                     <label for="keyinput">the key</label>
-                    <input id="keyinput" type="text">
+                    <input id="keyinput" onkeypress="checkNumber(event)" type="text">
                 </div>
-                <button>encrypt</button>
-                <button>decrypt</button>
+                <button onclick="encryptClick()">encrypt</button>
+                <button onclick="decryptClick()">decrypt</button>
             </div>
             <div class="codediv">
                 <label for="inputcode">Code</label>
