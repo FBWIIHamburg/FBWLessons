@@ -65,7 +65,7 @@ window.onload=function(){
 
 function buildTable(){
     
-
+if(materials.length!=0 && students.length!=0){
     let table=document.createElement("table");
     let tableHeader=table.createTHead();
     let headRow=tableHeader.insertRow(0);
@@ -95,6 +95,7 @@ function buildTable(){
     }
     stepDiv3.innerHTML="";
 stepDiv3.appendChild(table);
+}
    
 }
 function stepClick(num){
