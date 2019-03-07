@@ -1,6 +1,3 @@
-// let materials=["Math","Science","English","German"];
-// let students=["Ahmad","Petros","Wisam","Omar","Farooq"];
-
 
 window.onload=function(){
     let materials=[];
@@ -89,12 +86,17 @@ if(materials.length!=0 && students.length!=0){
             else{
                 let input=document.createElement("input");
                 input.type="text";
+                input.id="input_"+i+"_"+(x-1);
                 cell.appendChild(input);
             }
         } 
     }
     stepDiv3.innerHTML="";
 stepDiv3.appendChild(table);
+let resultButton=document.createElement("button");
+resultButton.innerText="Result";
+resultButton.onclick=function(){buildResultTable()};
+stepDiv3.appendChild(resultButton);
 }
    
 }
@@ -129,5 +131,40 @@ function saveStudent(){
     students.push(step2Text.value);
     step2Text.value="";
     }
-
+function buildResultTable(){
+    
+        if(materials.length!=0 && students.length!=0){
+            let table=document.createElement("table");
+            let tableHeader=table.createTHead();
+            let headRow=tableHeader.insertRow(0);
+            for (let h = 0; h <= materials.length; h++) {
+                let headCell=headRow.insertCell(h);
+                if(h==0){
+                headCell.innerText="Student Name";
+                }else
+                {
+                    headCell.innerText=materials[h-1];
+                }
+            }
+            let tableBody=table.createTBody();
+            for (let i = 0; i < students.length; i++) {
+                let row = tableBody.insertRow(i);
+                for (let x = 0; x <= materials.length; x++) {
+                    let cell=row.insertCell(x);
+                    if(x==0){
+                        cell.innerText=students[i];
+                    }
+                    else{
+                        // let input=document.createElement("input");
+                        // input.type="text";
+                        // input.id="input_"+i+"_"+(x-1);
+                        let input=document.getElementById("input_"+i+"_"+(x-1));
+                        cell.innerText=input.value;
+                    }
+                } 
+            }
+        stepDiv3.appendChild(table);
+        }
+           
+        }
 }
