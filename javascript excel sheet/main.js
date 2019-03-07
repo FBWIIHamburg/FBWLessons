@@ -97,6 +97,9 @@ let resultButton=document.createElement("button");
 resultButton.innerText="Result";
 resultButton.onclick=function(){buildResultTable()};
 stepDiv3.appendChild(resultButton);
+let resultDiv=document.createElement("div");
+resultDiv.id="resultDiv";
+stepDiv3.appendChild(resultDiv);
 }
    
 }
@@ -137,33 +140,45 @@ function buildResultTable(){
             let table=document.createElement("table");
             let tableHeader=table.createTHead();
             let headRow=tableHeader.insertRow(0);
-            for (let h = 0; h <= materials.length; h++) {
+            for (let h = 0; h <= materials.length+1; h++) {
                 let headCell=headRow.insertCell(h);
                 if(h==0){
                 headCell.innerText="Student Name";
                 }else
                 {
-                    headCell.innerText=materials[h-1];
+                    
+                    if(h==materials.length+1){
+                        headCell.innerText="Average";
+                    }
+                    else{
+                        headCell.innerText=materials[h-1];
+                    }
                 }
             }
             let tableBody=table.createTBody();
             for (let i = 0; i < students.length; i++) {
                 let row = tableBody.insertRow(i);
-                for (let x = 0; x <= materials.length; x++) {
+                let sum=0;
+                for (let x = 0; x <= materials.length+1; x++) {
                     let cell=row.insertCell(x);
                     if(x==0){
                         cell.innerText=students[i];
                     }
                     else{
-                        // let input=document.createElement("input");
-                        // input.type="text";
-                        // input.id="input_"+i+"_"+(x-1);
+                        if(x==materials.length+1){
+                            cell.innerText=(sum/materials.length).toFixed(2);
+                        }else{
                         let input=document.getElementById("input_"+i+"_"+(x-1));
                         cell.innerText=input.value;
+                        sum +=parseFloat( input.value);
+                        }
+                        
                     }
                 } 
             }
-        stepDiv3.appendChild(table);
+            let resultDiv=document.getElementById("resultDiv");
+            resultDiv.innerText="";
+            resultDiv.appendChild(table);
         }
            
         }
