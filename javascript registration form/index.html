@@ -250,7 +250,7 @@
             <hr>
             
         
-            <button class="registerbtn">previous</button><button class="registerbtn">Next</button>
+            <button class="registerbtn">previous</button><button class="registerbtn" onclick="nextDiv(this)">Next</button>
           </div>
 
           <div class="container" id="profileDiv">
@@ -273,11 +273,27 @@
             <hr>
             
         
-            <button class="registerbtn">previous</button><button class="registerbtn">Next</button>
+            <button class="registerbtn">previous</button><button class="registerbtn" onclick="nextDiv(this)">Next</button>
           </div>
 
           <div class="container" id="resultDiv">
-
+            <h1>Finish</h1>
+            <p>Please make sure that your data are correct</p>
+            <hr>
+            <label >Name </label>
+            <label id="nameLable"></label>
+            <label >Birth Date </label>
+            <label id="birthdateLable"></label>
+            <label >Nationality </label>
+            <label id="nationalityLable"></label>
+            <label >Address </label>
+            <label id="addressLable"></label>
+            <label >User Name </label>
+            <label id="unameLable"></label>
+            <label >Password </label>
+            <label id="pswLable"></label>
+            <label >Photo </label>
+            <img id="photoLable" />
           </div>
         
       </form>
