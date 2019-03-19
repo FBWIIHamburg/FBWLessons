@@ -6,8 +6,8 @@ let checklName=document.getElementsByName("lName")[0].checkValidity();
 let checkbDate=document.getElementsByName("bDate")[0].checkValidity();
 let checknationality=document.getElementsByName("nationality")[0].checkValidity();
 let birthDate=document.getElementsByName("bDate")[0].value;
-let currentDate=new Date().getFullYear();
-//alert((currentDate-Date.parse(birthDate))/(1000 * 60 * 60 * 24) );
+let currentDate=new Date();
+//alert(Math.floor((currentDate-Date.parse(birthDate))/(1000 * 60 * 60 * 24*365)) );
 let fatherDiv=element.parentNode.id;
 switch (fatherDiv) {
     case "personalDiv":
