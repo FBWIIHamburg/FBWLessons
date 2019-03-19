@@ -1,3 +1,34 @@
+
+function previous(element){
+    let fatherDiv=element.parentNode.id;
+switch (fatherDiv) {
+    
+    case "addressDiv":
+        
+            element.parentNode.style.display="none";
+            document.getElementById("personalDiv").style.display="block";
+            document.getElementById("profileDiv").style.display="none";
+            document.getElementById("resultDiv").style.display="none";
+            break;
+    case "profileDiv":
+            element.parentNode.style.display="none";
+            document.getElementById("personalDiv").style.display="none";
+            document.getElementById("addressDiv").style.display="block";
+            document.getElementById("resultDiv").style.display="none";
+
+        break;
+        case "resultDiv":
+            element.parentNode.style.display="none";
+            document.getElementById("personalDiv").style.display="none";
+            document.getElementById("addressDiv").style.display="none";
+            document.getElementById("profileDiv").style.display="block";
+
+        break;
+
+    default:
+        break;
+}
+}
 function nextDiv(element){
 //alert();
 
@@ -20,10 +51,10 @@ let fatherDiv=element.parentNode.id;
 switch (fatherDiv) {
     case "personalDiv":
     if(checkfName && checklName && checkbDate && checknationality){
-    //element.parentNode.style.display="none";
+    element.parentNode.style.display="none";
     document.getElementById("addressDiv").style.display="block";
-    //document.getElementById("profileDiv").style.display="none";
-    //document.getElementById("resultDiv").style.display="none";
+    document.getElementById("profileDiv").style.display="none";
+    document.getElementById("resultDiv").style.display="none";
     }
     else{
         alert("you Have invalid entries");
@@ -32,19 +63,19 @@ switch (fatherDiv) {
         break;
     case "addressDiv":
         if(checkaddress && checkhauseNum && checkzipCode){
-            //element.parentNode.style.display="none";
-            //document.getElementById("personalDiv").style.display="none";
+            element.parentNode.style.display="none";
+            document.getElementById("personalDiv").style.display="none";
             document.getElementById("profileDiv").style.display="block";
-            //document.getElementById("resultDiv").style.display="none";
+            document.getElementById("resultDiv").style.display="none";
         }else{
             alert("you Have invalid entries");
         }
         break;
     case "profileDiv":
         if(checkuName && checkpsw && checkimageFile && passwordMatch){
-            //element.parentNode.style.display="none";
-            //document.getElementById("personalDiv").style.display="none";
-            //document.getElementById("addressDiv").style.display="none";
+            element.parentNode.style.display="none";
+            document.getElementById("personalDiv").style.display="none";
+            document.getElementById("addressDiv").style.display="none";
             document.getElementById("resultDiv").style.display="block";
             showData();
         }else{
@@ -75,7 +106,7 @@ function showData(){
     document.getElementById("addressLable").innerText=address + ", "+hauseNum+" "+zipCode;
     document.getElementById("unameLable").innerText=uName;
     document.getElementById("pswLable").innerText=psw;
-    document.getElementById("photoLable").src=imageFile;
+    document.getElementById("photoLable").src=imageFile.replace("C:\\fakepath\\","./images/");
 
 
 }

@@ -63,3 +63,6 @@ body {
   #addressDiv , #profileDiv,#resultDiv{
 display: none;
   }
+  #photoLable{
+    width:250px ;
+  }

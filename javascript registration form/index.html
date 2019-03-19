@@ -229,7 +229,7 @@
           <hr>
           
       
-          <button class="registerbtn" onclick="nextDiv(this)">Next</button>
+          <button  type="button" class="registerbtn" onclick="nextDiv(this)">Next</button>
         </div>
 
 
@@ -250,7 +250,7 @@
             <hr>
             
         
-            <button class="registerbtn">previous</button><button class="registerbtn" onclick="nextDiv(this)">Next</button>
+            <button type="button" onclick="previous(this)" type="button" class="registerbtn">previous</button><button type="button" class="registerbtn" onclick="nextDiv(this)">Next</button>
           </div>
 
           <div class="container" id="profileDiv">
@@ -273,7 +273,7 @@
             <hr>
             
         
-            <button class="registerbtn">previous</button><button class="registerbtn" onclick="nextDiv(this)">Next</button>
+            <button type="button" onclick="previous(this)" class="registerbtn">previous</button><button type="button" class="registerbtn" onclick="nextDiv(this)">Next</button>
           </div>
 
           <div class="container" id="resultDiv">
@@ -294,6 +294,8 @@
             <label id="pswLable"></label>
             <label >Photo </label>
             <img id="photoLable" />
+            <hr>
+            <button type="button" class="registerbtn" onclick="previous(this)">previous</button>
           </div>
         
       </form>
