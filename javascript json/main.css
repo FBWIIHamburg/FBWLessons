@@ -1,3 +1,12 @@
 #img1{
     max-width: 200px;
 }
+
+#inputNum{
+    width: 150px;
+}
+#resultLable{
+    width: 150px;
+    display: inline-block;
+    border:2px solid rgba(134, 133, 133, 0.596);
+}
