@@ -1,4 +1,5 @@
 var RESdata;
+var counter=1;
 
 window.onload=function(){
     getData(showData);
@@ -7,9 +8,9 @@ window.onload=function(){
 
 function getData(someFunc){
 let req=new XMLHttpRequest();
-req.open("GET","https://reqres.in/api/users?page=5");
+req.open("GET","https://reqres.in/api/users?page="+counter);
 req.send();
-req.onreadystatechange=function(){
+req.onload=function(){
     if(req.status==200 && req.readyState==4 ){
 let jsonObj=req.responseText;
 RESdata=JSON.parse(jsonObj);
@@ -19,6 +20,7 @@ someFunc();
 }
 }
 function showData(){
+    document.getElementById("container").innerText="";
     let mainTable=document.createElement("table");
     for (let i = 0; i < RESdata.data.length; i++) {
         let row=mainTable.insertRow();
@@ -35,4 +37,14 @@ function showData(){
         
     }
     document.getElementById("container").appendChild(mainTable);
+}
+function buttonClick(element){
+    counter++;
+    getData(showData);
+    element.innerText=counter;
+    if(counter==RESdata.total/RESdata.per_page){
+        counter=0;
+    }
+    
+    
 }
