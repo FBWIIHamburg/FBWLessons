@@ -1,19 +1,20 @@
 var apiKey="085e9cd33056f583efc844c7ec4f5f72";
+
 window.onload=function(){
-    let weatherDiv=document.getElementById("weather");
+    var weatherDiv=document.getElementById("weather");
     let inputCity=document.createElement("input");
     inputCity.type="text";
     inputCity.placeholder="Write your City";
     inputCity.onkeypress=function(event){
         if(event.keyCode===13){
-            showWeather(event);
+            showWeather(event,weatherDiv);
         }
         
     }
-    weatherDiv.appendChild(inputCity);
+    weatherDiv.appendChild(inputCity,);
 }
 
-function showWeather(someVar){
+function showWeather(someVar,mainDiv){
     let inputCity=someVar.target.value;
 let xhr = new XMLHttpRequest();
 
@@ -27,6 +28,12 @@ xhr.onreadystatechange=function(){
     // console.log(xhr.status);
     // console.log(xhr.statusText);
     console.log(xhr.responseText);
+    let obj=JSON.parse(xhr.responseText);
+    console.log(obj);
+    console.log(obj.weather[0].main);
+    let citynameH=document.createElement("h1");
+    citynameH.innerText=obj.name;
+    mainDiv.appendChild(citynameH);
         }
     }
 }
