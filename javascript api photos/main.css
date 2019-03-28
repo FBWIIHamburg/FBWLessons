@@ -1,0 +1,130 @@
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#hoverDiv{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(12, 9, 9, 0.575);
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+
+}
+#hoverDiv>span{
+    position: absolute;
+    top: 0;
+    width:2rem;
+    right: 0;
+    font-size: 3rem;
+    transform: translate(-2rem);
+    color: wheat;
+}
+.popupImage{
+    width:90vw;
+    height:90vh;
+    transform: translate(5vw,5vh)
+}
+
+#controlsDiv{
+    float: left;
+    width: 30%;
+    height: 100vh;
+    background-color: rgba(145, 145, 243, 0.856);
+    font-size: 1.6rem;
+}
+#container{
+    float: left;
+    width: 70%;
+    height: 100vh;
+    background-color: rgb(109, 107, 102);
+}
+#controlsDiv > .control{
+    width: 100%;
+    margin-top: 1rem;
+}
+#controlsDiv > .control > label{
+    width: 30%;
+    float: left;
+    padding-left: 0.5rem;
+}
+#controlsDiv > .control > input{
+    width: 70%;
+}
+#controlsDiv > .control > .radiosDiv{
+    width: 70%;
+    float: left;
+    margin-top: 1rem;
+}
+#imagescontainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap:0.5rem 0.5rem;
+}
+#imagescontainer > .imgBox> img {
+    height: 10rem;
+}
+#imagescontainer > .imgBox {
+    text-align: center;
+    border: 2px solid black;
+    background-color: bisque;
+    position: relative;
+}
+.overal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(24, 20, 20, 0.767);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+#imagescontainer > .imgBox:hover > .overal{
+    z-index: 1;
+}
+.overal > div{
+    font-size: 2rem;
+    position: relative;
+    color:wheat;
+    width: 100%;
+    height: 100%;
+    top:0;
+
+}
+.overal > div:nth-child(1){
+    font-size: 2rem;
+    top:40%;
+
+    position: absolute;
+
+
+
+}
+.overal > div:nth-child(2){
+    font-size: 2rem;
+    top:40%;
+transform: translateX(3rem);
+    position: absolute;
+
+
+
+}
+.overal > div > i:hover ,#close {
+    color: blue ;
+    cursor: pointer;
+
+
+
+}
+#hoverDiv>img{
+    max-width: 90vw;
+    max-height: 90vh;
+    transform: translate(5vw,5vh)
+}
+
