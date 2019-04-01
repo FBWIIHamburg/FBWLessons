@@ -1,7 +1,7 @@
 var appkey="12000491-41fc68d8c365df909e022ceb6";
 var categories=["fashion", "nature", "backgrounds", "science", "education", "people", "feelings", "religion", "health", "places", "animals", "industry", "food", "computer", "sports", "transportation", "travel", "buildings", "business", "music"];
 var colors=["grayscale", "transparent", "red", "orange", "yellow", "green", "turquoise", "blue", "lilac", "pink", "white", "gray", "black", "brown"];
-
+var pageNum=1;
 window.onload=function(){
 
 
@@ -35,8 +35,8 @@ if(withDeafault){
 }
 
 
-function getData(key,keyWord,category,language,orientation,minHeight,minWidth,color,safe,orderType){
-let url="https://pixabay.com/api/?key="+key+"&q="+keyWord+"&image_type=photo&category="+category+"&pretty=true"+(language!=""?"&lang="+language:"")+(orientation!=""?"&orientation="+orientation:"")+(language!=""?"&lang="+language:"")+(minHeight!=""?"&min_height="+minHeight:"")+(minWidth!=""?"&min_width="+minWidth:"")+(color!=""?"&colors="+color:"")+(safe!=""?"&safesearch="+safe:"")+(orderType!=""?"&order="+orderType:"");
+function getData(key,keyWord,category,language,orientation,minHeight,minWidth,color,safe,orderType,page,perPage){
+let url="https://pixabay.com/api/?key="+key+"&q="+keyWord+"&image_type=photo&category="+category+"&pretty=true"+(language!=""?"&lang="+language:"")+(orientation!=""?"&orientation="+orientation:"")+(language!=""?"&lang="+language:"")+(minHeight!=""?"&min_height="+minHeight:"")+(minWidth!=""?"&min_width="+minWidth:"")+(color!=""?"&colors="+color:"")+(safe!=""?"&safesearch="+safe:"")+(orderType!=""?"&order="+orderType:"")+(page!=""?"&page="+page:"")+(perPage!=""?"&per_page="+perPage:"");
 // if(language!=""){
 //     url+="&lang="+language;
 // }
@@ -45,6 +45,8 @@ console.log(url)
 let xhr=new XMLHttpRequest();
 xhr.open("GET",url,true)
 xhr.send();
+let loader=document.getElementById("loader");
+loader.style.display="block";
 xhr.onreadystatechange=function(){
     if(xhr.readyState==4){
         if(xhr.status==200){
@@ -52,7 +54,12 @@ xhr.onreadystatechange=function(){
             let jsonObj=xhr.responseText;
             let obj=JSON.parse(jsonObj);
             galleryBuilder(obj.hits);
+            pagingBuilder(obj.totalHits);
+            
+        }else{
+        alert("Sorry try Again");
         }
+        loader.style.display="none";
     }
     
 }
@@ -60,39 +67,7 @@ xhr.onreadystatechange=function(){
 
 
 function searchClick(){
-    document.getElementById("imagescontainer").innerText="";
-    let searchKey=document.getElementById("searchInput").value;
-    let category=document.getElementById("categorySelect").value;
-    let language=document.getElementById("langSelect").value;
-    let orientation="";
-    if(document.getElementById("rad1").checked){
-        orientation="all";
-    }
-    else{
-        if(document.getElementById("rad2").checked){
-            orientation="horizontal";
-        }
-        else{
-            orientation="vertical";
-        }
-    }
-    let minH=document.getElementById("minHInput").value;
-    let minW=document.getElementById("minWInput").value;
-    let color=document.getElementById("colorsSelect").value;
-    let safe="false";
-    if(document.getElementById("safeSearchcheck").checked){
-        safe="true";
-    }
-    let orderType="";
-    if(document.getElementById("rad4").checked){
-        orderType="popular";
-    }
-    else{
-        if(document.getElementById("rad5").checked){
-            orderType="latest";
-        }
-    }
-    getData(appkey,searchKey,category,language,orientation,minH,minW,color,safe,orderType);
+    pageClick(1)
 }
 
 function galleryBuilder(data){
@@ -138,3 +113,69 @@ function closeOveral(){
 img.src="";
 document.getElementById("hoverDiv").style.display="none";
 }
+
+function pagingBuilder(num){
+
+    let itemsperPage=parseInt(document.getElementById("itemNumSelect").value);
+    if(num>itemsperPage){
+    let buttonsNum=Math.ceil( num/itemsperPage);
+    let buttonsCont=document.getElementById("pagesButs");
+    buttonsCont.innerText="";
+    for (let i = 1; i <= buttonsNum; i++) {
+        let button=document.createElement("button");
+        button.id="button"+i;
+        button.innerText=i;
+        button.onclick=function(){
+            pageClick(i);
+            pageNum=i;
+        };
+        if(i==pageNum){
+            button.disabled=true;
+        }
+        buttonsCont.appendChild(button);
+
+    }
+    document.getElementById("pagingDiv").style.display="block";
+}
+
+}
+function pageClick(pageNumber){
+    let itemsperPage=parseInt(document.getElementById("itemNumSelect").value);
+
+pageNum=pageNumber;
+    document.getElementById("imagescontainer").innerText="";
+    let searchKey=document.getElementById("searchInput").value;
+    let category=document.getElementById("categorySelect").value;
+    let language=document.getElementById("langSelect").value;
+    let orientation="";
+    if(document.getElementById("rad1").checked){
+        orientation="all";
+    }
+    else{
+        if(document.getElementById("rad2").checked){
+            orientation="horizontal";
+        }
+        else{
+            orientation="vertical";
+        }
+    }
+    let minH=document.getElementById("minHInput").value;
+    let minW=document.getElementById("minWInput").value;
+    let color=document.getElementById("colorsSelect").value;
+    let safe="false";
+    if(document.getElementById("safeSearchcheck").checked){
+        safe="true";
+    }
+    let orderType="";
+    if(document.getElementById("rad4").checked){
+        orderType="popular";
+    }
+    else{
+        if(document.getElementById("rad5").checked){
+            orderType="latest";
+        }
+    }
+    getData(appkey,searchKey,category,language,orientation,minH,minW,color,safe,orderType,pageNumber,itemsperPage);
+
+}
+

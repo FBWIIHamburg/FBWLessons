@@ -38,12 +38,16 @@ html{
     height: 100vh;
     background-color: rgba(145, 145, 243, 0.856);
     font-size: 1.6rem;
+    position: relative;
 }
 #container{
     float: left;
     width: 70%;
     height: 100vh;
     background-color: rgb(109, 107, 102);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    
 }
 #controlsDiv > .control{
     width: 100%;
@@ -66,6 +70,7 @@ html{
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap:0.5rem 0.5rem;
+    
 }
 #imagescontainer > .imgBox> img {
     height: 10rem;
@@ -128,3 +133,34 @@ transform: translateX(3rem);
     transform: translate(5vw,5vh)
 }
 
+#pagingDiv{
+    display: none;
+}
+#loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom:0 ;
+    background-color: rgba(24, 19, 19, 0.596);
+    display: none;
+}
+#loader img{
+    width: 10rem;
+    height: 10rem;
+    transform: translate(10vw,50vh);
+    
+}
+#pagesButs{
+    text-align: center;
+    display: inline-block;
+}
+#pagesButs > button{
+    margin-right: 1rem;
+    width: 2rem;
+    margin-bottom: 1rem;
+}
+#pagingDiv{
+    margin-top: 2rem;
+    text-align: center;
+}
