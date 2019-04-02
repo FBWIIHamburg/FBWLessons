@@ -1,0 +1,18 @@
+html{
+    font-size:62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.someDiv{
+    background-color: red;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+}

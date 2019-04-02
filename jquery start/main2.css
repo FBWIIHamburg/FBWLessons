@@ -1,0 +1,17 @@
+.div1{
+    width: 80px;
+    height: 80px;
+    display: none;
+    background-color: red;
+}
+.submenu , .menu  {
+    padding: 5px;
+    text-align: center;
+    background-color: aqua;
+    border: 1px solid brown;
+} 
+.menu{
+    padding: 50px;
+    display: none;
+    height: 500px;
+}

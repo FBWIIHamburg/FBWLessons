@@ -1,0 +1,24 @@
+html{
+    font-size:62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.testDiv{
+width: 10rem;
+height: 10rem;
+background-color: red;
+}
+
+.subtestDiv{
+    width: 5rem;
+    height: 5rem;
+    background-color: green;
+    }
+    .somediv{
+        width: 15rem;
+        height: 15rem;
+        background-color: blue;
+    }
