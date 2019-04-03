@@ -1,0 +1,17 @@
+html{
+    font-size: 62.5%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container{
+    width: 10rem;
+    margin: 1rem;
+    padding: 2rem;
+    height:5rem;
+    background-color: greenyellow;
+    border:0.5rem solid black;
+    
+}

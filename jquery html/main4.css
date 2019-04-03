@@ -1,0 +1,26 @@
+html{
+    font-size: 62.5%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.blue{
+    background-color: blue;
+    width: 20rem;
+    height: 20rem;
+}
+.red{
+    background-color: red;
+    width: 10rem;
+    height: 10rem;
+}
+.green{
+    background-color: green;
+    width: 5rem;
+    height: 5rem;
+}
+.withBorder{
+    border: 0.5rem solid black
+}
