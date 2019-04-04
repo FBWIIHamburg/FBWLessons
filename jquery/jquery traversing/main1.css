@@ -1,0 +1,48 @@
+html{
+    font-size: 62.5%;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+nav{
+    margin: 1rem;
+    background-color: skyblue;
+    height: 5rem;
+    position: sticky;
+    top: 0;
+}
+nav li{
+    color: wheat;
+    text-align: center;
+}
+nav>li{
+    display: inline-block;
+    font-size: 2.5rem;
+    /* padding: 1rem; */
+    margin: 1rem;
+    vertical-align: top;
+}
+nav > li:hover{
+    cursor: pointer;
+    
+}
+li{
+    list-style-type: none;
+}
+ul{
+    display: none;
+    background-color: skyblue;
+    padding: 0;
+    
+}
+ul>li{
+    margin: 0;
+    padding: 0;
+}
