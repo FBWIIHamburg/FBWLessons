@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bootstrap javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery library -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <!-- Popper JS -->
+    <script src="./js/popper.min.js"></script>
+    <!-- Latest compiled Bootstrap JavaScript -->
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="main2.css">
+    <script src="main2.js"></script>
+</head>
+<body>
+   
+    <!-- Button trigger modal -->
+<!-- <button id="btn1" type="button"  class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button> -->
+      <button onclick="showModal()">show</button>
+      <input id="ageInput" class="form-control" type="number">
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button onclick="hideModal()">hide</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
