@@ -27,7 +27,18 @@ var myUrl=url.parse(req.url,true);
                 }
             });
         }else{
-            res.end("404");
+            if ( myUrl.pathname == "/contact") {
+                fs.readFile('./contact.html', function (err, data) {
+                    if (!err) {
+                        res.end(data);
+                    }
+                    else{
+                        res.end('404 file not found'); 
+                    }
+                });
+            }else{
+                res.end("404");
+            }
         }
     }}).listen(3000);
 // myUrl.pathname
