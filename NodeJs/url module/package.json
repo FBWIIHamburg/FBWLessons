@@ -1,0 +1,23 @@
+{
+  "name": "ahmad",
+  "version": "1.0.0",
+  "description": "learning",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "no repo"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "emailer"
+  ],
+  "author": "ahmad osman",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.1.1"
+  }
+}

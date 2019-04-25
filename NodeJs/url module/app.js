@@ -1,6 +1,20 @@
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
+host: 'smtp.gmail.com',
+port: 465,
+secure: true,
+auth:{
+    user:'ahmad.osman@digitalcareerinstitute.org',
+    pass:''
+}
+});
+
+
+
+
 http.createServer(function (req, res) { 
 res.writeHead(200,{'content-type':'text/HTML'});
 //res.write("Hello World Ahmad <br />");
@@ -41,11 +55,32 @@ switch (myUrl.pathname) {
                             var senderEmail = myUrl.query.email;
                             var senderSubject = myUrl.query.subject;
                             var senderMessage = myUrl.query.message;
+
                             var responsHtml="<html>"+
                             "<head></head>"+
                             "<body>"+navi+"<h1>thank you "+senderName+" we got your message and we will response soon</h1></body>"+
                             "</html>";
-                            res.end(responsHtml);
+
+                            var mailOptions = {
+                              from : senderEmail,
+                              to : 'ahmad.osman@diigitalcareerinstitute.org',
+                              subject : senderSubject,
+                              text : senderMessage
+                            }
+                             transporter.sendMail(mailOptions,function (err,info) { 
+                                if (err) {
+                                    responsHtml=err.stack;
+                                    res.end(responsHtml);
+                                }
+                                else{
+                                    responsHtml += info.response;
+                                    res.end(responsHtml);
+                                }
+                              });
+            
+                            
+                           
+                            //res.end(responsHtml);
                         }else{
                             fs.readFile('./contact.html', function (err, data) {
                                 if (!err) {
