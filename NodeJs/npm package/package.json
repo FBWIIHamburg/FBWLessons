@@ -1,0 +1,14 @@
+{
+  "name": "npm_learn",
+  "version": "1.0.0",
+  "description": "this is to learn npm",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Ahmad Osman",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.1.1"
+  }
+}

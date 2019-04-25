@@ -63,7 +63,7 @@ switch (myUrl.pathname) {
 
                             var mailOptions = {
                               from : senderEmail,
-                              to : 'ahmad.osman@diigitalcareerinstitute.org',
+                              to : 'ahmad@ahmad-osman.com',
                               subject : senderSubject,
                               text : senderMessage
                             }
