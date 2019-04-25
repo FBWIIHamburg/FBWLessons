@@ -5,12 +5,19 @@ http.createServer(function (req, res) {
 res.writeHead(200,{'content-type':'text/HTML'});
 //res.write("Hello World Ahmad <br />");
 var myUrl=url.parse(req.url,true);
+var navi="";
+fs.readFile('./navigation.html',function (err,navData) {  
+    if (!err) {
+    navi=navData;
+    }
+
+
 switch (myUrl.pathname) {
     case "/":
     case "/home":
     fs.readFile('./index.html', function (err, data) {
         if (!err) {
-            res.end(data.toString().replace("someData",myUrl.pathname));
+            res.end(data.toString().replace("navigation",navi));
         }
         else{
             res.end('404 file not found'); 
@@ -20,7 +27,7 @@ switch (myUrl.pathname) {
         case "/about":
         fs.readFile('./about.html', function (err, data) {
             if (!err) {
-                res.end(data.toString().replace("someData",myUrl.pathname));
+                res.end(data.toString().replace("navigation",navi));
             }
             else{
                 res.end('404 file not found'); 
@@ -36,13 +43,13 @@ switch (myUrl.pathname) {
                             var senderMessage = myUrl.query.message;
                             var responsHtml="<html>"+
                             "<head></head>"+
-                            "<body><h1>thank you "+senderName+" we got your message and we will response soon</h1></body>"+
+                            "<body>"+navi+"<h1>thank you "+senderName+" we got your message and we will response soon</h1></body>"+
                             "</html>";
                             res.end(responsHtml);
                         }else{
                             fs.readFile('./contact.html', function (err, data) {
                                 if (!err) {
-                                    res.end(data);
+                                    res.end(data.toString().replace("navigation",navi));
                                 }
                                 else{
                                     res.end('404 file not found'); 
@@ -55,6 +62,7 @@ switch (myUrl.pathname) {
         res.end("404");
         break;
 }
+});
     // if (myUrl.pathname == "/" || myUrl.pathname == "/home") {
 
     //     fs.readFile('./index.html', function (err, data) {
