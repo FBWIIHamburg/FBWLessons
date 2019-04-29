@@ -1,19 +1,21 @@
 var http = require('http');
+
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
 host: 'smtp.gmail.com',
 port: 465,
 secure: true,
 auth:{
-    user:'ahmad.osman@digitalcareerinstitute.org',
-    pass:''
+    user:'kostasdiakogiannis23@gmail.com',
+    pass:'djarte023'
 }
 });
+
 http.createServer(function(req , res){
     res.writeHead(200, {'content-type' : 'text/HTML'});
     var mailOptions = {
         from : 'somesender@sender.sender',
-        to : 'ahalboob@gmail.com ',
+        to : 'ahalboob@gmail.com',
         subject : 'some subject',
         text : "Hello How are you are you good"
       };

@@ -1,0 +1,22 @@
+{
+  "name": "email-module",
+  "version": "1.0.0",
+  "description": "no",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "no"
+  },
+  "keywords": [
+    "no"
+  ],
+  "author": "ahmad osman",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.1.1",
+    "upper-case": "^1.1.3"
+  }
+}
