@@ -38,17 +38,11 @@ if(myUrl.pathname=="/contact"){
     {
         res.end(blablaerr.stack);
     }else{
-        emailSender.sendEmail("ahmad.osman@digitalcareerinstitute.org",myUrl.query.email,myUrl.query.subject,myUrl.query.message,function(blablaerr,someinfo){
-if(blablaerr)
-{
-    res.end(blablaerr.stack);
-}else{
-    res.end(someinfo.response+"<br>thank you "+myUrl.query.name+" we got your message and we will response soon" );
-}
-        });
+        res.end(someinfo.response+"<br>thank you "+myUrl.query.name+" we got your message and we will response soon" );
     }
-    res.end();
+ res.end();
             });
+            
         }
    // }
     
