@@ -24,7 +24,6 @@ if(blablaerr)
 }else{
     res.end(someinfo.response+"<br>thank you "+myUrl.query.name+" we got your message and we will response soon" );
 }
-res.end();
         });
     }
 }else{
