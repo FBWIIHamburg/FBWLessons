@@ -2,7 +2,6 @@ var http = require('http');
 var uc = require('upper-case');
 var url = require('url');
 var fs =require('fs');
-var qs = require('querystring');
 var emailSender = require('./email-sender');
 http.createServer(function (req , res ) { 
 res.writeHead(200,{'content-type':'text/HTML'});
@@ -11,19 +10,7 @@ var myUrl = url.parse(req.url,true);
 
 
 if(myUrl.pathname=="/contact"){
-//     if (req.method === 'POST') {
-//         let body='';
-//         req.on('data',function(ff){
-// body +=ff;
-//         });
-//         req.on('end',function(){
-//             var post = qs.parse(body);
-//            // res.end( post['name']);
-//            res.writeHead (301, {'Location': '/contact'});
-//            res.end( post['name']);
-//         });
-//     }
-    //else{
+
         if(myUrl.query.name=="" || typeof(myUrl.query.name)=="undefined"){
             fs.readFile('contact.html',function (err , data) {  
                 if(err){
@@ -38,13 +25,13 @@ if(myUrl.pathname=="/contact"){
     {
         res.end(blablaerr.stack);
     }else{
+        res.writeHead(301,{'Location':'/contact'});
         res.end(someinfo.response+"<br>thank you "+myUrl.query.name+" we got your message and we will response soon" );
     }
  res.end();
             });
             
         }
-   // }
     
 }else{
    res.end("you are not in contact page"); 
