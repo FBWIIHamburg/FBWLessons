@@ -6,7 +6,7 @@ port: 465,
 secure: true,
 auth:{
     user:'ahmad.osman@digitalcareerinstitute.org',
-    pass:'!asdfgrtyGfd'
+    pass:'12345678'
 }
     }
 );
