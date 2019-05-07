@@ -12,7 +12,11 @@ app.use(express.static(path.join(__dirname,'public')));
 app.get('/', (req, res)=>{
     //res.send('Hello world');
     //res.sendFile(path.join(__dirname, '/src/views/index.html'));
-    res.render('index');
+    let indexData = {
+        title: "Books Store",
+        nav:[{title: 'Authors', link: '/authors'},{title: 'Books', link: '/books'}]
+    }
+    res.render('index',indexData );
 });
 
 app.listen(port, ()=>{console.log(`server start at port number ${port}`);});
