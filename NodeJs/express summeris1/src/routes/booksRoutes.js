@@ -49,15 +49,14 @@ const books = [
       read: false
     }];
     const booksRoutes = express.Router();
-
+function route(nav) {  
     booksRoutes.route('/').get((req, res)=>{
-      res.render('books',{title: "Books List", nav: [{title: "Books", link: "/books"},
-          {title: "Authors", link: "/authors"}],books: books });
+      res.render('books',{title: "Books List", nav,books: books });
     });
     booksRoutes.route('/:id').get((req, res)=>{
-      res.render('singleBook',{ nav: [{title: "Books", link: "/books"},
-          {title: "Authors", link: "/authors"}],book: books[req.params.id] });
+      res.render('singleBook',{ nav,book: books[req.params.id] });
     });
-
-    module.exports=booksRoutes;
-    //exports.booksRoutes=booksRoutes;
+    return booksRoutes;
+}
+    module.exports=route;
+    

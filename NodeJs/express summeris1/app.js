@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const path = require('path');
 const date = require('./src/routes/date');
-const booksRoutes = require('./src/routes/booksRoutes');
+
 
 app.use(express.static(path.join(__dirname,'public')));
 app.set('views', path.join(__dirname, 'src/views'));
@@ -29,7 +29,9 @@ app.set('view engine', 'ejs');
 
 
 // end route system
-
+const nav = [{title: "Books2", link: "/books"},
+            {title: "Authors", link: "/authors"}];
+const booksRoutes = require('./src/routes/booksRoutes')(nav);
     app.use('/books',booksRoutes);
 app.get('/authors', (req, res)=>{
     res.send("Hello authors");
@@ -41,8 +43,7 @@ res.send(date.getDate);
 
 app.get('/', (req, res)=>{
     //res.send("Hello Ahmad");
-    res.render('index',{title: "Book Store", nav: [{title: "Books", link: "/books"},
-                                                   {title: "Authors", link: "/authors"}] });
+    res.render('index',{title: "Book Store", nav  });
 });
 
 
