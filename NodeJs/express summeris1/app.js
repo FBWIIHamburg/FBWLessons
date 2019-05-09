@@ -9,7 +9,24 @@ app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'ejs');
 // another view engine called jade
 
+// rout system one main rout and sub and sub of the sub
 
+// const booksRoutes = express.Router();
+// const subbooksRoutes = express.Router();
+// booksRoutes.route('/').get((req, res)=>{
+//   res.send("I am Booksroutes worker");
+// });
+// subbooksRoutes.route('/').get((req, res)=>{
+//   res.send("I am tes1 from subbooksRoutes");
+// });
+// subbooksRoutes.route('/test3').get((req, res)=>{
+//   res.send("I am tes3 from subbooksRoutes");
+// });
+// booksRoutes.use('/test1',subbooksRoutes);
+// app.use('/test',booksRoutes);
+
+
+// end route system
 const books = [
     {
       title: 'War and Peace',
@@ -59,22 +76,21 @@ const books = [
       author: 'Lev Nikolayevich Tolstoy',
       read: false
     }];
-    const booksRouter = express.Router();
-    booksRouter.route('/').get((req, res)=>{
-        res.render('books',{title: "Books List", nav: [{title: "Books", link: "/books"},
-        {title: "Authors", link: "/authors"}],books: books });
-});
-booksRouter.route('/:id').get((req, res)=>{
-    res.send(`this is ${req.params.id}`);
+    const booksRoutes = express.Router();
+
+    booksRoutes.route('/').get((req, res)=>{
+      res.render('books',{title: "Books List", nav: [{title: "Books", link: "/books"},
+          {title: "Authors", link: "/authors"}],books: books });
     });
-
-app.use('/books',booksRouter);
-
-    
-
+    booksRoutes.route('/:id').get((req, res)=>{
+      let bookName=books[req.params.id].title;
+      res.send(bookName);
+    });
+    app.use('/books',booksRoutes);
 app.get('/authors', (req, res)=>{
     res.send("Hello authors");
     });
+
 
 app.get('/', (req, res)=>{
     //res.send("Hello Ahmad");
