@@ -29,11 +29,7 @@ app.set('view engine', 'ejs');
 
 
 // end route system
-const someDate = require('./src/routes/date');
-app.get('/date',(req, res)=>{
-    res.send(someDate.getDate);
-})
-const nav = [{title: "Books", link: "/books"},
+const nav = [{title: "Books2", link: "/books"},
             {title: "Authors", link: "/authors"}];
 const booksRoutes = require('./src/routes/booksRoutes')(nav);
     app.use('/books',booksRoutes);
@@ -44,8 +40,7 @@ app.get('/authors', (req, res)=>{
 app.get('/date', (req, res)=>{
 res.send(date.getDate);
 });
-const adminRoutes = require('./src/routes/adminRoutes')(nav);
-app.use('/admin',adminRoutes);
+
 app.get('/', (req, res)=>{
     //res.send("Hello Ahmad");
     res.render('index',{title: "Book Store", nav  });
