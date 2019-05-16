@@ -10,6 +10,8 @@ const mainRouter = require('./src/routes/mainRouter');
 app.use('/', mainRouter);
 const adminRoutes = require('./src/routes/adminRoutes');
 app.use('/admin',adminRoutes );
+const dishesRoutes = require('./src/routes/dishesRoutes');
+app.use('/dishes', dishesRoutes);
 // app.get('/', (req, res)=>{
 //     res.end("hello");
 //     });//

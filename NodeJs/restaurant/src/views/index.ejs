@@ -152,7 +152,7 @@
                     <div class="menu-img" style="background-image: url(<%=mainFood[i].imgurl%>);"></div>
                     <div class="text d-flex">
                       <div class="one-half">
-                        <h3><%=mainFood[i].title%></h3>
+                        <a href="/dishes/<%=mainFood[i]._id%>"><h3><%=mainFood[i].title%></h3></a>
                         <p><%=mainFood[i].description%></p>
                       </div>
                       <div class="one-forth">
@@ -167,7 +167,7 @@
                     <div class="menu-img" style="background-image: url(<%=mainFood[i+1].imgurl%>);"></div>
                     <div class="text d-flex">
                       <div class="one-half">
-                        <h3><%=mainFood[i+1].title%></h3>
+                        <a href="/dishes/<%=mainFood[i+1]._id%>"><h3><%=mainFood[i+1].title%></h3></a>
                         <p><%=mainFood[i+1].description%></p>
                       </div>
                       <div class="one-forth">
@@ -191,7 +191,7 @@
                     <div class="menu-img" style="background-image: url(<%=dessertFood[i].imgurl%>);"></div>
                     <div class="text d-flex">
                       <div class="one-half">
-                        <h3><%=dessertFood[i].title%></h3>
+                        <a href="/dishes/<%=dessertFood[i]._id%>"><h3><%=dessertFood[i].title%></h3></a>
                         <p><%=dessertFood[i].description%></p>
                       </div>
                       <div class="one-forth">
@@ -206,7 +206,7 @@
                     <div class="menu-img" style="background-image: url(<%=dessertFood[i+1].imgurl%>);"></div>
                     <div class="text d-flex">
                       <div class="one-half">
-                        <h3><%=dessertFood[i+1].title%></h3>
+                        <a href="/dishes/<%=dessertFood[i+1]._id%>"><h3><%=dessertFood[i+1].title%></h3></a>
                         <p><%=dessertFood[i+1].description%></p>
                       </div>
                       <div class="one-forth">
@@ -231,7 +231,7 @@
                     <div class="menu-img" style="background-image: url(<%=drinksFood[i].imgurl%>);"></div>
                     <div class="text d-flex">
                       <div class="one-half">
-                        <h3><%=drinksFood[i].title%></h3>
+                        <a href="/dishes/<%=drinksFood[i]._id%>"><h3><%=drinksFood[i].title%></h3></a>
                         <p><%=drinksFood[i].description%></p>
                       </div>
                       <div class="one-forth">
@@ -246,7 +246,7 @@
                     <div class="menu-img" style="background-image: url(<%=drinksFood[i+1].imgurl%>);"></div>
                     <div class="text d-flex">
                       <div class="one-half">
-                        <h3><%=drinksFood[i+1].title%></h3>
+                        <a href="/dishes/<%=drinksFood[i+1]._id%>"><h3><%=drinksFood[i+1].title%></h3></a>
                         <p><%=drinksFood[i+1].description%></p>
                       </div>
                       <div class="one-forth">
@@ -260,6 +260,7 @@
               <%}%>
               </div>
               <%# end %>
+
               <div class="col-sm-12 pt-4 text-center ftco-animate">
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
                 <span><a href="reservation.html" class="btn btn-primary btn-outline-primary p-3">Make a Reservation</a></span>
