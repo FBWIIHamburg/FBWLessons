@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>this is index page</h1>
+    <table style="width:50vw">
+    <%for(let i = 0 ; i < people.length ; i++){%>
+        <tr>
+            <td>first name</td>
+            <td><%=people[i].firstname%></td>
+        </tr>
+        <tr>
+            <td>last name</td>
+            <td><%=people[i].lastname%></td>
+        </tr>
+        <tr>
+            <td>work</td>
+            <td><%=people[i].job%></td>
+        </tr>
+        <tr style="height:10px"> 
+        </tr>
+        <%}%>
+    </table>
+</body>
+</html>
