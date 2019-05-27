@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 5999;
 
 const user = {
-    username: 'samer',
+    username: 'Ali',
     password: 'osman1222222'
 }
 
@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
             }());
         }
         else{
-            res.send("user name is already exist please choos another one");
+            res.send(`${user.username} is already exist please choos another one`);
         }
     });
 

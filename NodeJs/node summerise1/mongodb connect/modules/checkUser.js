@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 const dbUrl = 'mongodb+srv://lion:jeny@cluster0-rmrmn.mongodb.net/test?retryWrites=true';
 const dbName = 'prototypeDB';
-function checkUserName(userName , done) {
+function checkUserName(userName , callback) {
     (async function mongo() {
         let client;
         try {
@@ -14,14 +14,14 @@ function checkUserName(userName , done) {
             client.close();
             console.log(user);
             if(user){
-                done(false);
+                callback(false);
             }else{
-                done(true);
+                callback(true);
             }
         } catch (error) {
             console.log(error.message);
             client.close();
-            done(false);
+            callback(false);
         }
     }());
   }
