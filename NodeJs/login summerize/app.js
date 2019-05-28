@@ -55,10 +55,14 @@ else{
 app.get('/profile', (req, res) => {
     console.log(req.session.user);
     if(req.session.user){
-    res.send('profile welcom '+req.session.user.username);
+    res.send('profile welcom '+req.session.user.username + '<br><a href="/logout">logout</a>');
     }else{
         res.redirect('/');
     }
+});
+app.get('/logout', (req, res) =>{
+    req.session.destroy();
+    res.redirect('/');
 });
 app.get('/error', (req, res) => {
     res.send('username or password is wrong');
