@@ -7,11 +7,18 @@
     <title>Upload file</title>
 </head>
 <body>
-    <form action="/uploadfile" method="POST">
-    <input type="file" name="avatar" >  
+    <form action="/uploadfile" enctype="multipart/form-data" method="POST">
+    <input type="file"  name="avatar" >  
     <br>
     <br>
     <input type="submit" value="upload">
     </form>
+    <br><br><br><br><br><br>
+    <form action="/uploadfiles" enctype="multipart/form-data" method="POST">
+        <input type="file" multiple name="avatar" >  
+        <br>
+        <br>
+        <input type="submit" value="upload">
+        </form>
 </body>
 </html>

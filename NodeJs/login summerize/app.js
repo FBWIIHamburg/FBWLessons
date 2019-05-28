@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const multer = require('multer');
  const { MongoClient } = require('mongodb');
 const conf = require('./config');
 const session = require('express-session');
@@ -12,6 +13,10 @@ app.use(session({
     saveUninitialized: true
     
   }));
+
+  
+
+
 // use this tow lines code so we can get posted data 
 // using req.body
 app.use(express.json());
@@ -55,7 +60,7 @@ else{
 app.get('/profile', (req, res) => {
     console.log(req.session.user);
     if(req.session.user){
-    res.send('profile welcom '+req.session.user.username + '<br><a href="/logout">logout</a>');
+    res.send('profile welcom '+req.session.user.username + '<br><a href="/logout">logout</a><br><img src="/uploads/'+req.session.user.avatar+'">');
     }else{
         res.redirect('/');
     }
@@ -70,6 +75,17 @@ app.get('/error', (req, res) => {
 app.get('/register', (req, res) =>{
     res.render('register');
 });
+
+// configuration od multer to upload file
+const storage = multer.diskStorage({
+    destination:'./public/uploads/',
+    filename: (req,file,callback)=>{
+        callback(null, file.originalname);
+    }
+})
+const upload = multer({storage: storage});
+
+app.use('/register',upload.single('reg_avatar'));
 app.post('/register', (req, res) =>{
     const dbName = 'herokuwebDB';
 (async function mongo(){
@@ -77,13 +93,15 @@ app.post('/register', (req, res) =>{
 try {
     client = await MongoClient.connect(conf.mongoURI, {useNewUrlParser: true});
     const db = client.db(dbName);
+    console.log(req.file);
     const user = await db.collection('users').insertOne(
         {
             username: req.body.reg_username,
             password:req.body.reg_password,
             email:req.body.reg_email,
             fullname:req.body.reg_fullname,
-            gender:req.body.reg_gender
+            gender:req.body.reg_gender,
+            avatar: req.file.filename
         });
 client.close();
     res.redirect('/profile');
@@ -92,6 +110,9 @@ client.close();
     res.send(error.message);
 }
 }())
+
+
+
 });
 
 app.listen(port, () => {

@@ -34,7 +34,7 @@
         <div class="logo">register</div>
         <!-- Main Form -->
         <div class="login-form-1">
-            <form id="register-form" class="text-left" method="POST" action="/register">
+            <form id="register-form" class="text-left" method="POST" action="/register" enctype="multipart/form-data">
                 <div class="login-form-main-message"></div>
                 <div class="main-login-form">
                     <div class="login-group">
@@ -70,6 +70,12 @@
 
                             <input type="radio" class="" name="reg_gender" value="female" id="female" placeholder="username">
                             <label for="female">female</label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg_avatar" class="sr-only">Photo</label>
+                            <input type="file" class="form-control" id="reg_avatar" name="reg_avatar"
+                                placeholder="upload photo">
                         </div>
 
                         <div class="form-group login-group-checkbox">
