@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text compiner</title>
+</head>
+<body>
+    first name 
+    <input type="text" id="Fname">
+
+    <br>
+    last name 
+    <input type="text" id="Lname">
+
+    <br>
+    <button onclick="sendData()">send</button>
+    
+
+    <script>
+function sendData(){
+  
+    // if you want to send data to a page in another website you
+    // need to add the full url
+   // postData('http://localhost:3000/',{
+    
+    postData('/',{
+        Fname: document.getElementById('Fname').value,
+        Lname: document.getElementById('Lname').value
+    }).then((data)=>{
+alert(data);
+    }).catch(error => console.error(error));
+}
+
+
+function postData(url, data){
+    return fetch(url,{
+        method: 'POST',  // GET, PUT, DELETE, etc
+        mode: 'cors',  // no-cors, same-origin
+        cache: 'no-cache', //default, reload, force-cache
+        credentials: 'same-origin', // include, same-origin, omit
+        headers: {
+            'Content-Type': 'application/json'
+            // if you are using GET you need to use this option
+            // content-Type': 'applicatoin/X-www-form-urlencoded'
+        },
+        redirect: 'follow', // manual, error,
+        referrer:'no-referrer', // client
+        body: JSON.stringify(data),
+    }).then((response)=>{
+return response.json();
+    });
+}
+    </script>
+</body>
+</html>

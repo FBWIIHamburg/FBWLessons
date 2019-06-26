@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>check mongodb</title>
+</head>
+<body>
+
+    <label for="connString">enter your connection string</label>
+    <input type="text" name="connString" id="connString">
+    <button onclick="sendData()">check</button>
+
+    <script>
+function sendData(){
+    //alert("hello");
+    const xhr = new XMLHttpRequest();
+    const url = '/checkdbConnection';
+    const param = `connString=${document.getElementById('connString').value}`;
+    xhr.open('POST',url,true);
+    // set request header
+    xhr.setRequestHeader('content-type','application/x-www-form-urlencoded');
+    xhr.onreadystatechange = ()=>{
+        if(xhr.readyState === 4 && xhr.status === 200){
+            if(xhr.responseText === '1'){
+                alert("connection success");
+            }else{
+                alert("connection failed");
+            }
+        }
+    }
+    xhr.send(param);
+
+}
+        </script>
+    
+</body>
+</html>
