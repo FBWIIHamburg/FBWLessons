@@ -1,0 +1,15 @@
+.listWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 15px;
+}
+.alert{
+    border: 1px solid red;
+    background: #fa8796;
+    padding: 15px 25px;
+    border-radius:8px;
+    margin: 50px auto;
+}

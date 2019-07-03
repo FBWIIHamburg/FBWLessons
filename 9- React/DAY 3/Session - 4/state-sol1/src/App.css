@@ -1,0 +1,16 @@
+
+.Appform{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Appform .input{
+  padding: 5px 10px;
+  font-size: 18px;
+  color: #111;
+  border: 3px solid #999;
+  margin: 10px;
+  border-radius: 5px;
+}

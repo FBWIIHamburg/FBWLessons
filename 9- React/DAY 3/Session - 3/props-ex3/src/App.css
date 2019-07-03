@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.PrimaryButton{
+  font-size: 18px;
+  border-radius: 10px;
+  background: blue;
+  padding: 5px 10px;
+  color: white
+}
+.SecondaryButton{
+  font-size: 18px;
+  border-radius: 10px;
+  background: green;
+  padding: 5px 10px;
+  color: white
+}
+
