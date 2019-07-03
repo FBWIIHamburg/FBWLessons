@@ -1,0 +1,14 @@
+.btn{
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.increase{
+    
+    background: blue;
+}
+.decrease{
+    
+    background: red;
+}

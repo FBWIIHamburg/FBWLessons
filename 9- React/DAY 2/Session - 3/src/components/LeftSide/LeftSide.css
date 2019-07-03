@@ -1,0 +1,11 @@
+.LeftSide{
+    background: #aaa;
+    flex: 1 25%;
+}
+.LeftSide ul{
+    list-style-type: none;
+}
+.LeftSide img{
+    width: 60px;
+    height: 60px;
+}

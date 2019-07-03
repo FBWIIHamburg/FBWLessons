@@ -1,0 +1,20 @@
+.App {
+  background: #eee;
+  padding: 50px 0 ;
+  height: 100vh;
+}
+.container{
+  width: 40%;
+  display: block;
+  margin: auto;
+}
+
+
+.btn{
+  background: #a5bde2;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+}

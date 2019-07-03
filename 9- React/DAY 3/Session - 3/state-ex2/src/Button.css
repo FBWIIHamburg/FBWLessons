@@ -1,0 +1,20 @@
+.btn{
+    width: 80px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.increase{
+    
+    background: blue;
+}
+.decrease{
+    
+    background: red;
+}
+
+.result
+{
+    
+    background: green;
+}
