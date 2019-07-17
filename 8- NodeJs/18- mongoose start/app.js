@@ -6,16 +6,49 @@ let app = express();
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    fname: String,
-    lname: String,
-    username: String,
-    birthdate: Date,
-    password: String,
-    married: Boolean,
-    verified: Boolean
+    fname: {
+        type: String,
+        required: true
+    },
+    lname: {
+        type: String,
+        required: true
+    },
+    username: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    birthdate: {
+        type: Date,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true,
+        minlength:8
+    },
+    married: {
+        type: Boolean,
+        required: true
+    },
+    verified: {
+        type: Boolean,
+        required: true
+    }
 });
 let Users = mongoose.model('users', userSchema);
-
+function checkConnection(){
+    const checkPromise = new Promise((resolve, reject)=>{
+        if(mongoose.connection.readyState != 1){
+            reject("database is not connected");
+        }
+        else{
+            resolve();
+        }
+    });
+    return checkPromise;
+}
 app.get('/connect', (req, res)=>{
     if(mongoose.connection.readyState != 1){
 mongoose.connect('mongodb://localhost:27017/mongooseDB',{
@@ -40,6 +73,28 @@ app.get('/disconnect', (req, res) => {
         res.send(error);
     });
 });
+
+app.get('/addUser', (req, res) => {
+    checkConnection().then(()=>{
+        let newUser = new Users({
+            fname: "Ahmad",
+        lname: "Osman",
+        username: "jenylion",
+        birthdate: new Date(1986,2,2),
+        password: "12345678",
+        married: true,
+        verified: false
+        });
+        newUser.save().then(savedUser=>{
+            res.json(savedUser);
+        }).catch(error=>{
+            res.json(error);
+        });
+    }).catch(error=>{
+        res.json(error);
+    })
+});
+
 app.listen(port,()=>{
     console.log(`app is running in port ${port}`);
 }); 
