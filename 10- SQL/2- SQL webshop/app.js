@@ -102,15 +102,12 @@ app.get('/customers4', (req, res) => {
 
 // show sum payments from USA in spicfice month 
 app.get('/customers5', (req, res) => {
-    let content = "";
     sql.sqlQuery("select sum(payments.amount) as total from payments"+
-     "inner join customers on customers.customerNumber = "+
-     "payments.customerNumber where customers.country like 'USA' "+
-     "and payments.paymentDate between '2003-01-01' and '2003-01-30' ").then(result=>{
-        result.forEach(element => {
-            content +=element.total+ '<br>';
-       });
-       res.send(content);
+     " inner join customers on customers.customerNumber = "+
+     " payments.customerNumber where customers.country like 'USA' "+
+     " and payments.paymentDate between '2003-01-01' and '2003-01-30' ").then(result=>{
+        
+       res.send(result);
     }).catch(error=>{
         res.send(error);
     })
