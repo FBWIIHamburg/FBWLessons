@@ -20,4 +20,12 @@ router.get('/success',(req, res)=>{
   }
 });
 
+router.get('/facebooklogin', passport.authenticate('facebook',{scope:'email'}));
+router.get('/answer', passport.authenticate('facebook',{
+  failureRedirect: '/'
+}),
+function (req,res) {
+  res.redirect('/success');
+  }
+);
 module.exports = router;
