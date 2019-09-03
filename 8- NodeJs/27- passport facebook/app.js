@@ -23,7 +23,7 @@ passport.serializeUser(function(user, cb) {
   // create facebook strategy 
   const facestrategy = new facebookStrategy({
 clientID: '386097498770497',
-clientSecret: 'your secret',
+clientSecret: '0932025247b225771de2bedbefa91cff',
 callbackURL: '/answer'
   },
   function (accessToken, refreshToken, profile, cb) { 
