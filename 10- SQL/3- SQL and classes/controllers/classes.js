@@ -21,14 +21,14 @@ this.password = password;
 
     //static method
     static getCustomerById(id){
-        const queryPromise = new Promise((resolve, reject)={
+        const queryPromise = new Promise((resolve, reject)=>{
             sqlQuery(`select * from customers where customerNumber = ${id} `).then(customer=>{
             
                 if(customer.length == 0){
-                    return null;
+                    reject(null);
                 }else{
                     let data = customer[0];
-                    return new Customer(data.customerNumber,
+                    resolve( new Customer(data.customerNumber,
                         data.customerName,
                         data.contactLastName,
                         data.contactFirstName,
@@ -43,16 +43,18 @@ this.password = password;
                         data.creditLimit,
                         data.username,
                         data.password
-                        );
+                        ));
                 }
             }).catch(error=>{
-    
+                reject(error);
             });
-        });
         
 
-    }
+    });
+    return queryPromise;
 }
+}
+
 
 module.exports={
     Customer

@@ -19,7 +19,12 @@ app.get('/testconnection', (req, res) => {
     })
 });
 app.get('/customer', (req, res) => {
-    res.json(Customer.getCustomerById(114));
+    Customer.getCustomerById(112).then(customer=>{
+        res.json(customer.Fname);
+    }).catch(error=>{
+        res.json(error);
+    });
+
 });
 
 
