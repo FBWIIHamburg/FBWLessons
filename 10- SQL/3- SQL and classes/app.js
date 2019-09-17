@@ -76,6 +76,20 @@ app.get('/showpage/:data', (req, res) => {
     
 });
 
+app.get('/ordersViewer', (req, res) => {
+    Customer.getCustomerById(114).then(customer=>{
+        customer.getOrders().then(orders=>{
+            res.send(JSON.stringify(customer) + '<br><br><br>' + JSON.stringify(orders));
+        }).catch(error=>{
+            res.send(error);
+        });
+
+    }).catch(error=>{
+        res.json(error);
+
+    });
+});
+
 app.listen(port, () => {
     console.log(`App listening on port ${port}!`);
 });

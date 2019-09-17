@@ -23,6 +23,31 @@ this.password = password;
 getAddress(){
     return this.address1 + " " + this.address2 + " " + this.city + " " + this.state + " " + this.country;
 }
+getOrders(){
+    const getPromise = new Promise((resolve, reject)=>{
+        sqlQuery(`select orders.* from orders inner join customers on orders.customerNumber = customers.customerNumber where customers.customerNumber = ${this.Id} `).then(orders=>{
+            let allOrders = [];
+            console.log(orders);
+            orders.forEach(order => {
+                allOrders.push(
+                    new Order(order.orderNumber,
+                        order.orderDate,
+                        order.requiredDate,
+                        order.shippedDate,
+                        order.status,
+                        order.comments,
+                        order.customerNumber
+                        )
+                );
+            });
+            resolve(allOrders);
+        
+        }).catch(error=>{
+            reject(error);
+        })
+        });
+        return getPromise;
+}
 save(){
     const savePromise = new Promise((resolve, reject)=>{
         sqlQuery(`UPDATE customers SET customerName='${this.companyName}',
@@ -197,6 +222,17 @@ class Employee{
         }
     });
     return queryPromise;
+    }
+}
+class Order{
+    constructor(id, orderdate, requireddate, shippeddate, status, comments, customerid){
+        this.Id = id;
+        this.orderDate = orderdate;
+        this.requiredDate = requireddate;
+        this.shippedDate= shippeddate;
+        this.status = status;
+        this.comments = comments;
+        this.customerId = customerid;
     }
 }
 
