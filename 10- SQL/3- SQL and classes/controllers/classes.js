@@ -82,7 +82,73 @@ save(){
             });
     });
     return queryPromise;
+
 }
+static getAll(){
+const getPromise = new Promise((resolve, reject)=>{
+sqlQuery('select * from customers').then(customers=>{
+    let allCustomers = [];
+    customers.forEach(customer => {
+        allCustomers.push(
+            new Customer(customer.customerNumber,
+                customer.customerName,
+                customer.contactLastName,
+                customer.contactFirstName,
+                customer.phone,
+                customer.addressLine1,
+                customer.addressLine2,
+                customer.city,
+                customer.state,
+                customer.postalCode,
+                customer.country,
+                customer.salesRepEmployeeNumber,
+                customer.creditLimit,
+                customer.username,
+                customer.password
+                )
+        );
+    });
+    resolve(allCustomers);
+
+}).catch(error=>{
+    reject(error);
+})
+});
+return getPromise;
+}
+static getPage(pageNumber, elementsNumber){
+    const getPromise = new Promise((resolve, reject)=>{
+        let startNum = (pageNumber-1)*5;
+    sqlQuery(`select * from customers limit ${startNum}, ${elementsNumber} `).then(customers=>{
+        let allCustomers = [];
+        customers.forEach(customer => {
+            allCustomers.push(
+                new Customer(customer.customerNumber,
+                    customer.customerName,
+                    customer.contactLastName,
+                    customer.contactFirstName,
+                    customer.phone,
+                    customer.addressLine1,
+                    customer.addressLine2,
+                    customer.city,
+                    customer.state,
+                    customer.postalCode,
+                    customer.country,
+                    customer.salesRepEmployeeNumber,
+                    customer.creditLimit,
+                    customer.username,
+                    customer.password
+                    )
+            );
+        });
+        resolve(allCustomers);
+    
+    }).catch(error=>{
+        reject(error);
+    })
+    });
+    return getPromise;
+    }
 }
 
 class Employee{

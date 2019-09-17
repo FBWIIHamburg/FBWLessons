@@ -57,7 +57,24 @@ Employee.getEmployeeById(req.params.id).then(employee=>{
 })
     
 });
+app.get('/allcustomers', (req, res) => {
+    Customer.getAll().then(customers=>{
+        res.json(customers);
+    }).catch(error=>{
+        res.json(error);
+    });
+});
 
+app.get('/showpage/:data', (req, res) => {
+    let pageNum = req.params.data.split(',')[0];
+    let elementNum = req.params.data.split(',')[1];
+    Customer.getPage(pageNum, elementNum).then(customers=>{
+        res.json(customers);
+    }).catch(error=>{
+        res.json(error);
+    })
+    
+});
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}!`);
