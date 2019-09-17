@@ -1,6 +1,8 @@
 
 const express = require('express');
-const {Customer} = require('./controllers/classes');
+const {Customer, Employee} = require('./controllers/classes');
+
+
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -18,13 +20,42 @@ app.get('/testconnection', (req, res) => {
         res.send(error); 
     })
 });
-app.get('/customer', (req, res) => {
-    Customer.getCustomerById(112).then(customer=>{
-        res.json(customer.Fname);
+app.get('/customerupdate', (req, res) => {
+    Customer.getCustomerById(114).then(customer=>{
+         customer.country = 'Germany';
+         customer.city = 'Hamburg1';
+         customer.save().then(data=>{
+            res.json(data);
+         }).catch(error=>{
+            res.json(error);
+         });
+        
     }).catch(error=>{
         res.json(error);
     });
 
+});
+app.get('/customer', (req, res) => {
+    Customer.getCustomerById(114).then(customer=>{
+        Employee.getEmployeeById(customer.employee).then(employee=>{
+            res.json(employee);
+        }).catch(error=>{
+            res.json(error);
+        })
+        
+    }).catch(error=>{
+        res.json(error);
+    });
+
+});
+
+app.get('/employee/:id', (req, res) => {
+Employee.getEmployeeById(req.params.id).then(employee=>{
+    res.json(employee);
+}).catch(error=>{
+    res.json(error);
+})
+    
 });
 
 

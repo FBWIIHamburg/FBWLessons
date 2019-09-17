@@ -25,6 +25,7 @@ function connect() {
     return connectPromise;
   }
 function sqlQuery(query){
+    console.log(query);
     const queryPromise = new Promise((resolve, reject)=>{
         connect().then(()=>{
             con.query(query,(error, result, fields)=>{
