@@ -13,6 +13,6 @@
     "jest": "^24.9.0",
     "puppeteer": "^1.19.0",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8"
+    "webpack-cli": "^3.3.12"
   }
 }
